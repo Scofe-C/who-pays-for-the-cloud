@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Global data-center electricity use nearly doubles by 2030</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+:root { --bg:#F7F5F0; --text:#1F1F1F; --text2:#5E5E5E; --grid:#D9D6CF; --cost:#B3452C; --gain:#2F5D50;
+        --neutral:#3C5A78; --cap:#C99A2E; --captext:#7A5C14; --muted:#BFB8AC; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--text); }
+body { font-family: 'Source Sans 3', Arial, sans-serif; font-size: 16px; line-height: 1.45; }
+main { max-width: 860px; margin: 0 auto; padding: 16px; }
+h1 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: clamp(1.25rem, 4.5vw, 1.75rem); line-height: 1.2; margin: 0 0 6px; }
+.subtitle { color: var(--text2); margin: 0 0 12px; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; margin: 0 0 8px; }
+.controls label { font-weight: 600; }
+select, button { font: inherit; min-height: 44px; padding: 6px 12px; border: 1px solid var(--text2);
+                 border-radius: 4px; background: #fff; color: var(--text); cursor: pointer; }
+button[aria-pressed="true"] { background: var(--text); color: var(--bg); }
+select:focus-visible, button:focus-visible { outline: 3px solid var(--neutral); outline-offset: 2px; }
+.chart { width: 100%; min-height: 300px; position: relative; }
+.chart svg { display: block; overflow: visible; }
+.chart svg text { font-family: 'Source Sans 3', Arial, sans-serif; fill: var(--text); }
+.tip { position: absolute; display: none; pointer-events: none; background: #fff; border: 1px solid var(--grid);
+       border-radius: 4px; padding: 6px 8px; font-size: 0.85rem; line-height: 1.35; max-width: 260px;
+       box-shadow: 0 2px 6px rgba(0,0,0,.12); z-index: 2; }
+.key { font-size: 0.9rem; color: var(--text2); margin: 4px 0 0; }
+.live { min-height: 2.9em; margin: 8px 0 0; }
+.note { color: var(--text2); font-size: 0.9rem; margin: 8px 0 0; }
+.source { font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 0.75rem; color: var(--text2); margin: 12px 0 0; overflow-wrap: anywhere; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+<main>
+<h1>Global data-center electricity use nearly doubles by 2030</h1>
+<p class="subtitle">From 485 TWh in 2025 to 950 TWh in 2030 in the IEA Base Case (projection, report year 2026). Hover a bar for its source.</p>
+
+<div class="chart" role="img" aria-label="Horizontal bar chart of global data-center electricity use: 2023 360 TWh, 2024 415 TWh, 2025 485 TWh, 2030 (projection) 950 TWh.">
+<div style="height:340px; width:100%;">                        <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-4.1.1.min.js" integrity="sha256-O24V1F27f8pb0glCkelh3cVHLNiHAJ5gCaVtq2aNch8=" crossorigin="anonymous"></script>                <div id="p3-plot" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("p3-plot")) {                    Plotly.newPlot(                        "p3-plot",                        [{"cliponaxis":false,"customdata":[["IEA, Key Questions on Energy and AI (2026)","estimate"],["IEA, Energy and AI (2025)","estimate"],["IEA, Key Questions on Energy and AI (2026)","estimate"],["IEA, Key Questions on Energy and AI (2026)","projection (Base Case)"]],"hovertemplate":"\u003cb\u003e%{y}\u003c\u002fb\u003e\u003cbr\u003e%{customdata[1]}: %{x:,.0f} TWh\u003cbr\u003e%{customdata[0]}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":["#3C5A78","#3C5A78","#3C5A78","#B3452C"],"line":{"color":["#3C5A78","#3C5A78","#3C5A78","#B3452C"],"width":1.5},"pattern":{"fgcolor":"#F7F5F0","fgopacity":0.6,"shape":["","","","\u002f"],"size":8}},"orientation":"h","text":["360 TWh","415 TWh","485 TWh","950 TWh"],"textfont":{"color":"#1F1F1F","family":"'IBM Plex Mono', 'Courier New', monospace","size":13},"textposition":"outside","x":[0,0,0,0],"y":["2023","2024","2025","2030 (projection)"],"type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05}}},"font":{"family":"'Source Sans 3', Arial, sans-serif","color":"#1F1F1F","size":13},"margin":{"l":110,"r":24,"t":8,"b":56},"hoverlabel":{"font":{"family":"'Source Sans 3', Arial, sans-serif","size":13}},"xaxis":{"tickfont":{"family":"'Source Sans 3', Arial, sans-serif","size":13},"title":{"text":"Electricity use (TWh)"},"showgrid":false,"zerolinecolor":"#5E5E5E","linecolor":"#5E5E5E","range":[0,1235.0],"fixedrange":true},"yaxis":{"tickfont":{"family":"'Source Sans 3', Arial, sans-serif","size":13},"title":{"font":{"family":"'Source Sans 3', Arial, sans-serif","size":14,"color":"#1F1F1F"}},"showgrid":false,"zerolinecolor":"#5E5E5E","linecolor":"#5E5E5E","autorange":"reversed","fixedrange":true},"legend":{"font":{"size":13},"orientation":"h","yanchor":"top","y":-0.2,"x":0},"paper_bgcolor":"#F7F5F0","plot_bgcolor":"#F7F5F0","showlegend":false,"bargap":0.35},                        {"responsive": true, "displaylogo": false, "modeBarButtonsToRemove": ["select2d", "lasso2d", "autoScale2d", "toggleSpikelines"]}                    ).then(function(){
+                            
+var gd = document.getElementById('p3-plot');
+var vals = [360, 415, 485, 950];
+var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+// Grow-in: restyle per animation frame (full layout each frame keeps outside labels placed).
+if (reduce) { Plotly.restyle(gd, {x: [vals]}, [0]); }
+else {
+  var t0 = null, dur = 900;
+  var step = function (ts) {
+    if (t0 === null) t0 = ts;
+    var k = Math.min(1, (ts - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+    Plotly.restyle(gd, {x: [vals.map(function (v) { return v * e; })]}, [0]);
+    if (k < 1) window.requestAnimationFrame(step);
+  };
+  window.requestAnimationFrame(step);
+}
+
+                        })                };            </script>        </div>
+</div>
+<p class="note">Hatched bar = projection. 2024 comes from IEA Energy and AI (2025); 2023, 2025 and 2030 come from IEA Key Questions on Energy and AI (2026).</p>
+<p class="note">2023 value: Annex Table A.4, Base Case; same table gives 416 for 2024 (IEA 2025 text: 415).</p>
+<p class="source">Source: IEA, Energy and AI (2025); IEA, Key Questions on Energy and AI (2026). IEA, CC BY 4.0. Data snapshot 2026-11-07.</p>
+</main>
+
+</body>
+</html>

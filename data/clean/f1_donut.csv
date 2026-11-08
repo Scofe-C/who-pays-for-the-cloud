@@ -1,0 +1,4 @@
+slice,counties,building_area_m2,share_pct,attribution
+"Loudoun County, VA",Loudoun County VA,2621578.1,14.77,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+Next 4 counties,"Prince William County VA, Maricopa County AZ, Licking County OH, Polk County IA",2946099.2,16.6,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+All other counties,200 counties,12182015.6,68.63,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0

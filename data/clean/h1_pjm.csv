@@ -1,0 +1,6 @@
+delivery_year,price_usd_mw_day,at_cap,uncapped_sim_usd_mw_day,fact_id,uncapped_fact_id,at_cap_fact_id,at_cap_source,source_title,source_url,page,as_of
+2024/25,28.92,,,pjm_2425,,,,PJM 2028/2029 Base Residual Auction Report,https://www.pjm.com/-/media/DotCom/markets-ops/rpm/rpm-auction-info/2028-2029/2028-2029-bra-results-report.pdf#page=8,8,2026-11-07
+2025/26,269.92,,,pjm_2526,,,,PJM 2028/2029 Base Residual Auction Report,https://www.pjm.com/-/media/DotCom/markets-ops/rpm/rpm-auction-info/2028-2029/2028-2029-bra-results-report.pdf#page=8,8,2026-11-07
+2026/27,329.17,True,,pjm_2627,,pjm_2627_at_cap,"PJM 2026/2027 Base Residual Auction Report (July 2025), p. 6",PJM 2028/2029 Base Residual Auction Report,https://www.pjm.com/-/media/DotCom/markets-ops/rpm/rpm-auction-info/2028-2029/2028-2029-bra-results-report.pdf#page=8,8,2026-11-07
+2027/28,333.44,True,,pjm_2728,,,,PJM 2028/2029 Base Residual Auction Report,https://www.pjm.com/-/media/DotCom/markets-ops/rpm/rpm-auction-info/2028-2029/2028-2029-bra-results-report.pdf#page=8,8,2026-11-07
+2028/29,325.0,True,554.72,pjm_2829,pjm_2829_uncapped,,,PJM 2028/2029 Base Residual Auction Report,https://www.pjm.com/-/media/DotCom/markets-ops/rpm/rpm-auction-info/2028-2029/2028-2029-bra-results-report.pdf#page=8,8,2026-11-07

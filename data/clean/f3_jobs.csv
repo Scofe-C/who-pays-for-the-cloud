@@ -1,0 +1,3 @@
+phase,jobs,squares,fact_id,derivation,source_title,source_url,page,as_of
+Construction,59000,59,jlarc_jobs_construction,"squares = jobs / 1000 (one square per 1,000 jobs)","JLARC Report 598, Data Centers in Virginia",https://jlarc.virginia.gov/pdfs/reports/Rpt598-2.pdf#page=34,34,2026-11-07
+Operations,15000,15,jlarc_jobs_operations,"squares = jobs / 1000 (one square per 1,000 jobs)","JLARC Report 598, Data Centers in Virginia",https://jlarc.virginia.gov/pdfs/reports/Rpt598-2.pdf#page=33,33,2026-11-07

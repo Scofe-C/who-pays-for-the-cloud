@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The tax break grew faster than the new tax can recoup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+:root { --bg:#F7F5F0; --text:#1F1F1F; --text2:#5E5E5E; --grid:#D9D6CF; --cost:#B3452C; --gain:#2F5D50;
+        --neutral:#3C5A78; --cap:#C99A2E; --captext:#7A5C14; --muted:#BFB8AC; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--text); }
+body { font-family: 'Source Sans 3', Arial, sans-serif; font-size: 16px; line-height: 1.45; }
+main { max-width: 860px; margin: 0 auto; padding: 16px; }
+h1 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: clamp(1.25rem, 4.5vw, 1.75rem); line-height: 1.2; margin: 0 0 6px; }
+.subtitle { color: var(--text2); margin: 0 0 12px; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; margin: 0 0 8px; }
+.controls label { font-weight: 600; }
+select, button { font: inherit; min-height: 44px; padding: 6px 12px; border: 1px solid var(--text2);
+                 border-radius: 4px; background: #fff; color: var(--text); cursor: pointer; }
+button[aria-pressed="true"] { background: var(--text); color: var(--bg); }
+select:focus-visible, button:focus-visible { outline: 3px solid var(--neutral); outline-offset: 2px; }
+.chart { width: 100%; min-height: 300px; position: relative; }
+.chart svg { display: block; overflow: visible; }
+.chart svg text { font-family: 'Source Sans 3', Arial, sans-serif; fill: var(--text); }
+.tip { position: absolute; display: none; pointer-events: none; background: #fff; border: 1px solid var(--grid);
+       border-radius: 4px; padding: 6px 8px; font-size: 0.85rem; line-height: 1.35; max-width: 260px;
+       box-shadow: 0 2px 6px rgba(0,0,0,.12); z-index: 2; }
+.key { font-size: 0.9rem; color: var(--text2); margin: 4px 0 0; }
+.live { min-height: 2.9em; margin: 8px 0 0; }
+.note { color: var(--text2); font-size: 0.9rem; margin: 8px 0 0; }
+.source { font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 0.75rem; color: var(--text2); margin: 12px 0 0; overflow-wrap: anywhere; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+<main>
+<h1>The tax break grew faster than the new tax can recoup</h1>
+<p class="subtitle">Virginia’s data center sales and use tax exemption: benefit reported by operators, FY2023 to FY2025, $ billions (self-reported, state + local). Toggle to compare the annual revenue cap of the new 1.1¢/kWh tax.</p>
+<div class="controls"><button type="button" id="h2-cap" aria-pressed="false">Show the new tax cap</button></div>
+<div class="chart">
+<div id="h2-chart"></div>
+</div>
+<p class="note">JLARC: about 48¢ of state revenue comes back for every $1 of exemption.</p>
+<p class="note">FY2023 is from JLARC (state, local and regional sales tax); later years are from the Virginia Department of Taxation’s RD40 report. All figures are self-reported by operators.</p>
+<p class="note">New tax: 1.1¢ per kWh from July 1, 2026, revenue capped at $0.6B a year (FY2027 onward); amounts above the cap are refunded. Secondary source (law-firm summary of the budget bill, HB 30).</p>
+<p class="source">Sources: JLARC Report 598, Data Centers in Virginia; Virginia Dept. of Taxation, Biennial Data Center Retail Sales and Use Tax Exemption Report (RD40, Jan 2, 2026); Williams Mullen, Virginia budget creates new electricity consumption tax for data centers (secondary; HB 30). Data snapshot 2026-11-07.</p>
+</main>
+<script>
+(function () {
+
+var NS = 'http://www.w3.org/2000/svg';
+function el(tag, attrs, parent) { var e = document.createElementNS(NS, tag);
+  for (var k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; }
+function txt(parent, x, y, s, attrs) { var a = attrs || {}; a.x = x; a.y = y; var t = el('text', a, parent);
+  t.textContent = s; return t; }
+function makeTip(box) { var tip = document.createElement('div'); tip.className = 'tip'; tip.setAttribute('role', 'tooltip');
+  box.appendChild(tip);
+  return { show: function (html, x, y) { tip.innerHTML = html; tip.style.display = 'block';
+      var w = box.clientWidth, tw = tip.offsetWidth;
+      tip.style.left = Math.min(Math.max(0, x - tw / 2), w - tw) + 'px';
+      tip.style.top = Math.max(0, y - tip.offsetHeight - 10) + 'px'; },
+    hide: function () { tip.style.display = 'none'; } }; }
+function bindTip(node, tip, box, html) {
+  function s() { var r = node.getBoundingClientRect(), b = box.getBoundingClientRect();
+    tip.show(html, r.left - b.left + r.width / 2, r.top - b.top); }
+  node.addEventListener('mouseenter', s); node.addEventListener('mouseleave', tip.hide); }
+function onResize(fn) { var t, w0 = window.innerWidth; window.addEventListener('resize', function () {
+  if (window.innerWidth === w0) return; w0 = window.innerWidth; clearTimeout(t); t = setTimeout(fn, 120); }); }
+function money(n, d) { return '$' + n.toLocaleString('en-US', {minimumFractionDigits: d, maximumFractionDigits: d}); }
+function newSvg(box, W, H, label) { var svg = el('svg', {width: W, height: H, viewBox: '0 0 ' + W + ' ' + H,
+  role: 'img', 'aria-label': label}); box.insertBefore(svg, box.firstChild); return svg; }
+var D = {"fy": ["FY2023", "FY2024", "FY2025"], "vals": [0.9286, 1.2925, 1.9414], "cap": 0.6, "src": ["JLARC", "Va. Dept. of Taxation (RD40)", "Va. Dept. of Taxation (RD40)"], "c": {"cost": "#B3452C", "gain": "#2F5D50", "neutral": "#3C5A78", "cap": "#C99A2E", "captext": "#7A5C14", "muted": "#BFB8AC", "text": "#1F1F1F", "text2": "#5E5E5E", "bg": "#F7F5F0", "mono": "'IBM Plex Mono', 'Courier New', monospace"}};
+
+var box = document.getElementById('h2-chart'), btn = document.getElementById('h2-cap'), tip, c = D.c, showCap = false;
+function render() {
+  box.innerHTML = ''; tip = makeTip(box);
+  var W = box.clientWidth, H = Math.max(280, Math.min(380, W * 0.55)), m = {l: 52, r: 12, t: 28, b: 34};
+  var svg = newSvg(box, W, H, 'Column chart of the Virginia data center sales tax exemption benefit, self-reported, in billion dollars: ' +
+      D.fy.map(function (f, i) { return f + ' $' + D.vals[i].toFixed(2) + 'B'; }).join(', ') +
+      (showCap ? '. A dashed line marks the new tax revenue cap of $' + D.cap + 'B a year.' : '.'));
+  var top = Math.max.apply(null, D.vals.concat([D.cap])) * 1.18, ih = H - m.t - m.b, iw = W - m.l - m.r;
+  var y = function (v) { return m.t + ih - v / top * ih; };
+  for (var t = 0; t <= top; t += 0.5) txt(svg, m.l - 8, y(t) + 4, '$' + t.toFixed(1) + 'B',
+    {'text-anchor': 'end', 'font-size': 12, fill: c.text2});
+  el('line', {x1: m.l, x2: m.l + iw, y1: y(0), y2: y(0), stroke: c.text2}, svg);
+  var band = iw / D.fy.length, bw = Math.min(80, band * 0.55);
+  D.fy.forEach(function (f, i) {
+    var cx = m.l + band * (i + 0.5), v = D.vals[i];
+    var r = el('rect', {x: cx - bw / 2, y: y(v), width: bw, height: y(0) - y(v), fill: c.gain}, svg);
+    bindTip(r, tip, box, '<b>' + f + '</b><br>' + money(v, 2) + 'B in sales and use tax not paid<br>' +
+      'Self-reported by data center operators<br>Source: ' + D.src[i]);
+    txt(svg, cx, y(v) - 8, money(v, 2) + 'B', {'text-anchor': 'middle', 'font-size': 13, 'font-family': c.mono});
+    txt(svg, cx, y(0) + 20, f, {'text-anchor': 'middle', 'font-size': 12});
+  });
+  if (showCap) {
+    el('line', {x1: m.l, x2: m.l + iw, y1: y(D.cap), y2: y(D.cap), stroke: c.cap, 'stroke-width': 3,
+      'stroke-dasharray': '8 5'}, svg);
+    var lab = txt(svg, m.l + 6, y(D.cap) - 8, 'New tax: at most ' + money(D.cap, 1) + 'B a year',
+      {'font-size': 12, fill: c.captext, 'font-weight': 600, 'paint-order': 'stroke', stroke: c.bg, 'stroke-width': 4});
+  }
+}
+btn.addEventListener('click', function () { showCap = !showCap; btn.setAttribute('aria-pressed', showCap);
+  btn.textContent = showCap ? 'Hide the new tax cap' : 'Show the new tax cap'; render(); });
+onResize(render); render();
+
+})();
+</script>
+</body>
+</html>

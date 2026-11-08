@@ -1,0 +1,52 @@
+state,state_name,facilities,building_area_km2
+AL,Alabama,11,0.1967
+AK,Alaska,0,0.0
+AZ,Arizona,65,0.8855
+AR,Arkansas,2,0.0034
+CA,California,112,0.6774
+CO,Colorado,20,0.136
+CT,Connecticut,5,0.0258
+DE,Delaware,0,0.0
+DC,District of Columbia,1,0.0
+FL,Florida,16,0.0552
+GA,Georgia,37,0.6149
+HI,Hawaii,0,0.0
+ID,Idaho,5,0.0658
+IL,Illinois,50,0.6802
+IN,Indiana,5,0.0215
+IA,Iowa,63,1.1063
+KS,Kansas,7,0.0526
+KY,Kentucky,5,0.0081
+LA,Louisiana,1,0.0
+ME,Maine,2,0.0051
+MD,Maryland,13,0.0486
+MA,Massachusetts,3,0.0287
+MI,Michigan,10,0.0251
+MN,Minnesota,11,0.116
+MS,Mississippi,2,0.0755
+MO,Missouri,15,0.1391
+MT,Montana,2,0.0009
+NE,Nebraska,26,0.5008
+NV,Nevada,38,0.4865
+NH,New Hampshire,3,0.0044
+NJ,New Jersey,53,0.6072
+NM,New Mexico,16,0.3085
+NY,New York,21,0.1123
+NC,North Carolina,23,0.2088
+ND,North Dakota,2,0.0024
+OH,Ohio,91,1.4282
+OK,Oklahoma,6,0.051
+OR,Oregon,109,1.5912
+PA,Pennsylvania,9,0.0567
+RI,Rhode Island,0,0.0
+SC,South Carolina,12,0.2057
+SD,South Dakota,2,0.0278
+TN,Tennessee,22,0.4402
+TX,Texas,127,1.7548
+UT,Utah,15,0.2571
+VT,Vermont,0,0.0
+VA,Virginia,319,3.8819
+WA,Washington,82,0.7319
+WV,West Virginia,1,0.0
+WI,Wisconsin,13,0.0161
+WY,Wyoming,19,0.1079

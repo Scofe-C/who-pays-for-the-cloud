@@ -1,0 +1,52 @@
+state,state_name,dc_mwh_2023,share_pct_2023
+AL,Alabama,1489200,1.71
+AK,Alaska,,
+AZ,Arizona,6253268,7.43
+AR,Arkansas,,
+CA,California,9331619,3.7
+CO,Colorado,1509640,2.66
+CT,Connecticut,262800,0.95
+DE,Delaware,,
+DC,District of Columbia,,
+FL,Florida,1384080,0.56
+GA,Georgia,6175391,4.26
+HI,Hawaii,8760,0.1
+ID,Idaho,148920,0.57
+IL,Illinois,7450176,5.48
+IN,Indiana,192720,0.19
+IA,Iowa,6193320,11.43
+KS,Kansas,8760,0.02
+KY,Kentucky,1620600,2.15
+LA,Louisiana,78840,0.08
+ME,Maine,26280,0.22
+MD,Maryland,96360,0.16
+MA,Massachusetts,1062369,2.08
+MI,Michigan,525600,0.52
+MN,Minnesota,824316,1.24
+MS,Mississippi,,
+MO,Missouri,972360,1.21
+MT,Montana,578160,3.71
+NE,Nebraska,3959520,11.7
+NV,Nevada,3416707,8.69
+NH,New Hampshire,17520,0.16
+NJ,New Jersey,4038360,5.42
+NM,New Mexico,402960,1.48
+NY,New York,4067385,2.84
+NC,North Carolina,2672676,1.92
+ND,North Dakota,3915720,15.42
+OH,Ohio,2363886,1.58
+OK,Oklahoma,1226400,1.76
+OR,Oregon,6413663,11.39
+PA,Pennsylvania,4590240,3.16
+RI,Rhode Island,17520,0.23
+SC,South Carolina,2023560,2.45
+SD,South Dakota,70080,0.52
+TN,Tennessee,1327140,1.3
+TX,Texas,21813159,4.59
+UT,Utah,2562037,7.68
+VT,Vermont,,
+VA,Virginia,33851122,25.59
+WA,Washington,5171612,5.69
+WV,West Virginia,,
+WI,Wisconsin,148920,0.21
+WY,Wyoming,1857120,11.26

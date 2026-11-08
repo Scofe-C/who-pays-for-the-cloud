@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Who Pays for the Cloud? Chart index</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+:root { --bg:#F7F5F0; --text:#1F1F1F; --text2:#5E5E5E; --grid:#D9D6CF; --cost:#B3452C; --gain:#2F5D50;
+        --neutral:#3C5A78; --cap:#C99A2E; --captext:#7A5C14; --muted:#BFB8AC; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--text); }
+body { font-family: 'Source Sans 3', Arial, sans-serif; font-size: 16px; line-height: 1.45; }
+main { max-width: 860px; margin: 0 auto; padding: 16px; }
+h1 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: clamp(1.25rem, 4.5vw, 1.75rem); line-height: 1.2; margin: 0 0 6px; }
+.subtitle { color: var(--text2); margin: 0 0 12px; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; margin: 0 0 8px; }
+.controls label { font-weight: 600; }
+select, button { font: inherit; min-height: 44px; padding: 6px 12px; border: 1px solid var(--text2);
+                 border-radius: 4px; background: #fff; color: var(--text); cursor: pointer; }
+button[aria-pressed="true"] { background: var(--text); color: var(--bg); }
+select:focus-visible, button:focus-visible { outline: 3px solid var(--neutral); outline-offset: 2px; }
+.chart { width: 100%; min-height: 300px; position: relative; }
+.chart svg { display: block; overflow: visible; }
+.chart svg text { font-family: 'Source Sans 3', Arial, sans-serif; fill: var(--text); }
+.tip { position: absolute; display: none; pointer-events: none; background: #fff; border: 1px solid var(--grid);
+       border-radius: 4px; padding: 6px 8px; font-size: 0.85rem; line-height: 1.35; max-width: 260px;
+       box-shadow: 0 2px 6px rgba(0,0,0,.12); z-index: 2; }
+.key { font-size: 0.9rem; color: var(--text2); margin: 4px 0 0; }
+.live { min-height: 2.9em; margin: 8px 0 0; }
+.note { color: var(--text2); font-size: 0.9rem; margin: 8px 0 0; }
+.source { font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 0.75rem; color: var(--text2); margin: 12px 0 0; overflow-wrap: anywhere; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+<main>
+<h1>Who Pays for the Cloud? Chart index</h1>
+<p class="subtitle">All 14 charts of the IE 6600 data story, with the colors and fonts they use.</p>
+
+<div class="chart">
+<p>Story intro: <a href="hero.html">hero map</a> (custom HTML/SVG, no chart ID).</p><table><thead><tr><th>ID</th><th>Tool</th><th>Title</th><th>Link</th></tr></thead><tbody><tr><td>DW1</td><td>Datawrapper</td><td>Virginia alone has more mapped data centers than Texas and California combined</td><td><a href="https://datawrapper.dwcdn.net/1UF89/1/">embed URL</a></td></tr><tr><td>DW2</td><td>Datawrapper</td><td>In Virginia, one in four kilowatt-hours went to data centers</td><td><a href="https://datawrapper.dwcdn.net/VEC9a/2/">embed URL</a></td></tr><tr><td>DW3</td><td>Datawrapper</td><td>The big jump came in 2025; 2026 added less</td><td><a href="https://datawrapper.dwcdn.net/we7PO/1/">embed URL</a></td></tr><tr><td>DW4</td><td>Datawrapper</td><td>So who wins, and who pays?</td><td><a href="https://datawrapper.dwcdn.net/nwkgu/1/">embed URL</a></td></tr><tr><td>F1</td><td>Flourish</td><td>Donut: share of mapped data-center floor space by county (title set in Flourish)</td><td><a href="https://public.flourish.studio/visualisation/30840499/">embed URL</a></td></tr><tr><td>F2</td><td>Flourish</td><td>Bar chart race: trailing-4-quarter capex, 5 companies (title set in Flourish)</td><td><a href="https://public.flourish.studio/visualisation/30840369/">embed URL</a></td></tr><tr><td>F3</td><td>Flourish</td><td>Pictogram: Virginia data-center jobs, construction vs operations (title set in Flourish)</td><td><a href="https://public.flourish.studio/visualisation/30840415/">embed URL</a></td></tr><tr><td>F4</td><td>Flourish</td><td>Stacked bars: data-center share of PJM capacity charges (title set in Flourish)</td><td><a href="https://public.flourish.studio/visualisation/30840465/">embed URL</a></td></tr><tr><td>P1</td><td>Plotly</td><td>Growth alone didn’t raise prices</td><td><a href="charts/p1.html">open</a></td></tr><tr><td>P2</td><td>Plotly</td><td>Data-center construction now outspends general office buildings</td><td><a href="charts/p2.html">open</a></td></tr><tr><td>P3</td><td>Plotly</td><td>Global data-center electricity use nearly doubles by 2030</td><td><a href="charts/p3.html">open</a></td></tr><tr><td>H1</td><td>Custom HTML/SVG</td><td>Three auctions in a row hit the ceiling</td><td><a href="charts/h1.html">open</a></td></tr><tr><td>H2</td><td>Custom HTML/SVG</td><td>The tax break grew faster than the new tax can recoup</td><td><a href="charts/h2.html">open</a></td></tr><tr><td>H3</td><td>Custom HTML/SVG</td><td>Forecasts for 2030 keep rising, even as 2024 came in at the low end</td><td><a href="charts/h3.html">open</a></td></tr></tbody></table><h2>Colors</h2><table><tbody><tr><td><span style="display:inline-block;width:1.2em;height:1.2em;background:#F7F5F0;border:1px solid #5E5E5E;vertical-align:middle"></span></td><td>Background</td><td><code>#F7F5F0</code></td></tr><tr><td><span style="display:inline-block;width:1.2em;height:1.2em;background:#1F1F1F;border:1px solid #5E5E5E;vertical-align:middle"></span></td><td>Text</td><td><code>#1F1F1F</code></td></tr><tr><td><span style="display:inline-block;width:1.2em;height:1.2em;background:#5E5E5E;border:1px solid #5E5E5E;vertical-align:middle"></span></td><td>Secondary text</td><td><code>#5E5E5E</code></td></tr><tr><td><span style="display:inline-block;width:1.2em;height:1.2em;background:#D9D6CF;border:1px solid #5E5E5E;vertical-align:middle"></span></td><td>Gridlines, borders</td><td><code>#D9D6CF</code></td></tr><tr><td><span style="display:inline-block;width:1.2em;height:1.2em;background:#B3452C;border:1px solid #5E5E5E;vertical-align:middle"></span></td><td>Costs / who pays</td><td><code>#B3452C</code></td></tr><tr><td><span style="display:inline-block;width:1.2em;height:1.2em;background:#2F5D50;border:1px solid #5E5E5E;vertical-align:middle"></span></td><td>Gains / who wins</td><td><code>#2F5D50</code></td></tr><tr><td><span style="display:inline-block;width:1.2em;height:1.2em;background:#3C5A78;border:1px solid #5E5E5E;vertical-align:middle"></span></td><td>Baseline, neutral series</td><td><code>#3C5A78</code></td></tr><tr><td><span style="display:inline-block;width:1.2em;height:1.2em;background:#C99A2E;border:1px solid #5E5E5E;vertical-align:middle"></span></td><td>Price caps, forecasts (lines only; text in this role uses #7A5C14)</td><td><code>#C99A2E</code></td></tr><tr><td><span style="display:inline-block;width:1.2em;height:1.2em;background:#BFB8AC;border:1px solid #5E5E5E;vertical-align:middle"></span></td><td>De-emphasized data</td><td><code>#BFB8AC</code></td></tr></tbody></table><p>Sequential scale for DW1 and the hero map (breaks 1, 10, 50, 100, 200 records): <span style="display:inline-block;width:1.2em;height:1.2em;background:#E9ECEF;border:1px solid #5E5E5E;vertical-align:middle"></span> <code>#E9ECEF</code> <span style="display:inline-block;width:1.2em;height:1.2em;background:#C3CED8;border:1px solid #5E5E5E;vertical-align:middle"></span> <code>#C3CED8</code> <span style="display:inline-block;width:1.2em;height:1.2em;background:#93A8BC;border:1px solid #5E5E5E;vertical-align:middle"></span> <code>#93A8BC</code> <span style="display:inline-block;width:1.2em;height:1.2em;background:#62809D;border:1px solid #5E5E5E;vertical-align:middle"></span> <code>#62809D</code> <span style="display:inline-block;width:1.2em;height:1.2em;background:#3C5A78;border:1px solid #5E5E5E;vertical-align:middle"></span> <code>#3C5A78</code> <span style="display:inline-block;width:1.2em;height:1.2em;background:#1E3348;border:1px solid #5E5E5E;vertical-align:middle"></span> <code>#1E3348</code></p><h2>Fonts</h2><ul><li>Source Serif 4: titles</li><li>Source Sans 3: body text and labels</li><li>IBM Plex Mono: numbers and source lines</li></ul><p>Fallbacks: Georgia, Arial, Courier New. Fonts are served by Google Fonts. These fonts apply to P1–P3, H1–H3 and the hero; Datawrapper and Flourish use their own font settings.</p><style>table { border-collapse: collapse; margin: 8px 0 16px; } td, th { padding: 6px 10px; border-bottom: 1px solid #D9D6CF; text-align: left; vertical-align: top; } h2 { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.15rem; margin: 20px 0 4px; } a { color: #3C5A78; }</style>
+</div>
+
+<p class="source">Data and code: data/clean/ and scripts/ in this repository. IM3-derived data: © OpenStreetMap contributors, ODbL 1.0.</p>
+</main>
+
+</body>
+</html>

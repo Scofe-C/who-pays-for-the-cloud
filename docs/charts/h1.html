@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Three auctions in a row hit the ceiling</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+:root { --bg:#F7F5F0; --text:#1F1F1F; --text2:#5E5E5E; --grid:#D9D6CF; --cost:#B3452C; --gain:#2F5D50;
+        --neutral:#3C5A78; --cap:#C99A2E; --captext:#7A5C14; --muted:#BFB8AC; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--text); }
+body { font-family: 'Source Sans 3', Arial, sans-serif; font-size: 16px; line-height: 1.45; }
+main { max-width: 860px; margin: 0 auto; padding: 16px; }
+h1 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: clamp(1.25rem, 4.5vw, 1.75rem); line-height: 1.2; margin: 0 0 6px; }
+.subtitle { color: var(--text2); margin: 0 0 12px; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; margin: 0 0 8px; }
+.controls label { font-weight: 600; }
+select, button { font: inherit; min-height: 44px; padding: 6px 12px; border: 1px solid var(--text2);
+                 border-radius: 4px; background: #fff; color: var(--text); cursor: pointer; }
+button[aria-pressed="true"] { background: var(--text); color: var(--bg); }
+select:focus-visible, button:focus-visible { outline: 3px solid var(--neutral); outline-offset: 2px; }
+.chart { width: 100%; min-height: 300px; position: relative; }
+.chart svg { display: block; overflow: visible; }
+.chart svg text { font-family: 'Source Sans 3', Arial, sans-serif; fill: var(--text); }
+.tip { position: absolute; display: none; pointer-events: none; background: #fff; border: 1px solid var(--grid);
+       border-radius: 4px; padding: 6px 8px; font-size: 0.85rem; line-height: 1.35; max-width: 260px;
+       box-shadow: 0 2px 6px rgba(0,0,0,.12); z-index: 2; }
+.key { font-size: 0.9rem; color: var(--text2); margin: 4px 0 0; }
+.live { min-height: 2.9em; margin: 8px 0 0; }
+.note { color: var(--text2); font-size: 0.9rem; margin: 8px 0 0; }
+.source { font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 0.75rem; color: var(--text2); margin: 12px 0 0; overflow-wrap: anywhere; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+<main>
+<h1>Three auctions in a row hit the ceiling</h1>
+<p class="subtitle">PJM capacity auction clearing price for the whole region (RTO), by delivery year. The peak was 2027/28 at $333.44/MW-day. Pick a year for details.</p>
+<div class="controls" role="group" aria-label="Delivery year" id="h1-buttons"><span style="font-weight:600">Delivery year</span><button type="button" aria-pressed="false">2024/25</button><button type="button" aria-pressed="false">2025/26</button><button type="button" aria-pressed="false">2026/27</button><button type="button" aria-pressed="false">2027/28</button><button type="button" aria-pressed="false">2028/29</button></div>
+<div class="chart">
+<div id="h1-chart"></div>
+</div>
+<p class="note"><span id="h1-note" class="live" aria-live="polite"></span></p>
+<p class="note"><span class="key"><span style="color:#C99A2E">- - -</span> cleared at the price cap &nbsp; <span style="color:#B3452C">○</span> PJM simulation without the cap and floor</span></p>
+<p class="note">Prices in $/MW-day of unforced capacity (UCAP), RTO clearing price. </p>
+<p class="source">Source: PJM 2028/2029 Base Residual Auction Report, p. 8; PJM 2026/2027 Base Residual Auction Report (July 2025), p. 6 (cap status 2026/27). Data snapshot 2026-11-07.</p>
+</main>
+<script>
+(function () {
+
+var NS = 'http://www.w3.org/2000/svg';
+function el(tag, attrs, parent) { var e = document.createElementNS(NS, tag);
+  for (var k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; }
+function txt(parent, x, y, s, attrs) { var a = attrs || {}; a.x = x; a.y = y; var t = el('text', a, parent);
+  t.textContent = s; return t; }
+function makeTip(box) { var tip = document.createElement('div'); tip.className = 'tip'; tip.setAttribute('role', 'tooltip');
+  box.appendChild(tip);
+  return { show: function (html, x, y) { tip.innerHTML = html; tip.style.display = 'block';
+      var w = box.clientWidth, tw = tip.offsetWidth;
+      tip.style.left = Math.min(Math.max(0, x - tw / 2), w - tw) + 'px';
+      tip.style.top = Math.max(0, y - tip.offsetHeight - 10) + 'px'; },
+    hide: function () { tip.style.display = 'none'; } }; }
+function bindTip(node, tip, box, html) {
+  function s() { var r = node.getBoundingClientRect(), b = box.getBoundingClientRect();
+    tip.show(html, r.left - b.left + r.width / 2, r.top - b.top); }
+  node.addEventListener('mouseenter', s); node.addEventListener('mouseleave', tip.hide); }
+function onResize(fn) { var t, w0 = window.innerWidth; window.addEventListener('resize', function () {
+  if (window.innerWidth === w0) return; w0 = window.innerWidth; clearTimeout(t); t = setTimeout(fn, 120); }); }
+function money(n, d) { return '$' + n.toLocaleString('en-US', {minimumFractionDigits: d, maximumFractionDigits: d}); }
+function newSvg(box, W, H, label) { var svg = el('svg', {width: W, height: H, viewBox: '0 0 ' + W + ' ' + H,
+  role: 'img', 'aria-label': label}); box.insertBefore(svg, box.firstChild); return svg; }
+var D = {"years": ["2024/25", "2025/26", "2026/27", "2027/28", "2028/29"], "prices": [28.92, 269.92, 329.17, 333.44, 325.0], "atCap": [false, false, true, true, true], "uncapped": [null, null, null, null, 554.72], "notes": ["2024/25: cleared at $28.92/MW-day.", "2025/26: cleared at $269.92/MW-day, 9.3× the year before.", "2026/27: cleared at $329.17/MW-day, +22.0% from the year before, at the price cap.", "2027/28: cleared at $333.44/MW-day, +1.3% from the year before (the highest in this series), at the price cap.", "2028/29: cleared at $325.00/MW-day, -2.5% from the year before, at the price cap. PJM’s simulation without the cap and floor: $554.72."], "c": {"cost": "#B3452C", "gain": "#2F5D50", "neutral": "#3C5A78", "cap": "#C99A2E", "captext": "#7A5C14", "muted": "#BFB8AC", "text": "#1F1F1F", "text2": "#5E5E5E", "bg": "#F7F5F0", "mono": "'IBM Plex Mono', 'Courier New', monospace"}};
+
+var box = document.getElementById('h1-chart'), tip, sel = D.years.length - 1, c = D.c;
+var noteEl = document.getElementById('h1-note');
+function render() {
+  box.innerHTML = ''; tip = makeTip(box);
+  var W = box.clientWidth, H = Math.max(300, Math.min(420, W * 0.62)), m = {l: 52, r: 12, t: 28, b: 34};
+  var svg = newSvg(box, W, H, 'Column chart of PJM capacity clearing prices by delivery year, in dollars per megawatt-day: ' +
+      D.years.map(function (y, i) { return y + ' $' + D.prices[i]; }).join(', ') + '.');
+  var top = Math.max.apply(null, D.prices.concat(D.uncapped.filter(function (v) { return v; }))) * 1.12;
+  var ih = H - m.t - m.b, iw = W - m.l - m.r, y = function (v) { return m.t + ih - v / top * ih; };
+  var step = top > 400 ? 100 : 50;
+  for (var t = 0; t <= top; t += step) {
+    txt(svg, m.l - 8, y(t) + 4, '$' + t, {'text-anchor': 'end', 'font-size': 12, fill: c.text2}); }
+  el('line', {x1: m.l, x2: m.l + iw, y1: y(0), y2: y(0), stroke: c.text2}, svg);
+  txt(svg, 0, 14, '$/MW-day', {'font-size': 12, fill: c.text2});
+  var band = iw / D.years.length, bw = Math.min(64, band * 0.62);
+  D.years.forEach(function (yr, i) {
+    var cx = m.l + band * (i + 0.5), v = D.prices[i];
+    var r = el('rect', {x: cx - bw / 2, y: y(v), width: bw, height: y(0) - y(v), fill: c.cost,
+      opacity: i === sel ? 1 : 0.45, style: 'cursor:pointer'}, svg);
+    r.addEventListener('click', function () { select(i); });
+    bindTip(r, tip, box, '<b>' + yr + '</b><br>' + money(v, 2) + ' per MW-day' +
+      (D.atCap[i] ? '<br>Cleared at the price cap' : '') +
+      (D.uncapped[i] ? '<br>Without cap and floor (PJM simulation): ' + money(D.uncapped[i], 2) : ''));
+    txt(svg, cx, y(v) - 9, money(v, 0), {'text-anchor': 'middle', 'font-size': 12,
+      'font-family': c.mono, 'font-weight': i === sel ? 600 : 400});
+    txt(svg, cx, y(0) + 20, yr, {'text-anchor': 'middle', 'font-size': 12, 'font-weight': i === sel ? 600 : 400});
+    if (D.atCap[i]) el('line', {x1: cx - bw / 2 - 6, x2: cx + bw / 2 + 6, y1: y(v), y2: y(v), stroke: c.cap,
+      'stroke-width': 3, 'stroke-dasharray': '6 4'}, svg);
+    if (D.uncapped[i]) {
+      el('line', {x1: cx, x2: cx, y1: y(v) - 24, y2: y(D.uncapped[i]) + 8, stroke: c.cost,
+        'stroke-width': 1.5, 'stroke-dasharray': '2 3'}, svg);
+      var ci = el('circle', {cx: cx, cy: y(D.uncapped[i]), r: 7, fill: c.bg, stroke: c.cost, 'stroke-width': 2.5}, svg);
+      bindTip(ci, tip, box, '<b>' + yr + ' without the cap</b><br>PJM simulation: ' + money(D.uncapped[i], 2) + ' per MW-day');
+      txt(svg, cx - 12, y(D.uncapped[i]) + 4, money(D.uncapped[i], 2) + ' without the cap',
+        {'text-anchor': 'end', 'font-size': 12, fill: c.cost});
+    }
+  });
+}
+function select(i) {
+  sel = i; noteEl.textContent = D.notes[i];
+  document.querySelectorAll('#h1-buttons button').forEach(function (b, j) { b.setAttribute('aria-pressed', j === i); });
+  render();
+}
+document.querySelectorAll('#h1-buttons button').forEach(function (b, j) { b.addEventListener('click', function () { select(j); }); });
+onResize(render); select(sel);
+
+})();
+</script>
+</body>
+</html>

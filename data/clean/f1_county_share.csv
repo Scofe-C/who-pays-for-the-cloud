@@ -1,0 +1,206 @@
+county_fips,county,state,building_area_m2,share_pct,rank,attribution
+51107,Loudoun County,VA,2621578.1,14.7697,1,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+51153,Prince William County,VA,890565.8,5.0174,2,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+04013,Maricopa County,AZ,883468.0,4.9774,3,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+39089,Licking County,OH,646584.1,3.6428,4,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+19153,Polk County,IA,525481.3,2.9605,5,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+41049,Morrow County,OR,482380.6,2.7177,6,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+06085,Santa Clara County,CA,467309.2,2.6328,7,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+39049,Franklin County,OH,445767.3,2.5114,8,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+41059,Umatilla County,OR,412758.5,2.3254,9,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+53025,Grant County,WA,403742.5,2.2746,10,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+31153,Sarpy County,NE,392298.0,2.2102,11,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+17031,Cook County,IL,358334.5,2.0188,12,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+48029,Bexar County,TX,354152.6,1.9953,13,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+41013,Crook County,OR,351743.8,1.9817,14,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+41067,Washington County,OR,330271.2,1.8607,15,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+48139,Ellis County,TX,315793.6,1.7791,16,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+19155,Pottawattamie County,IA,300041.1,1.6904,17,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+35061,Valencia County,NM,281471.8,1.5858,18,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+48439,Tarrant County,TX,261728.8,1.4746,19,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+32003,Clark County,NV,254939.3,1.4363,20,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+34023,Middlesex County,NJ,228944.2,1.2898,21,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+48113,Dallas County,TX,226804.9,1.2778,22,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+49049,Utah County,UT,212591.4,1.1977,23,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+48475,Ward County,TX,208003.2,1.1719,24,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+45015,Berkeley County,SC,197170.5,1.1108,25,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+51059,Fairfax County,VA,192341.3,1.0836,26,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+34017,Hudson County,NJ,185850.2,1.0471,27,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+13121,Fulton County,GA,179762.0,1.0128,28,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+17043,DuPage County,IL,177172.9,0.9982,29,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+47165,Sumner County,TN,174641.2,0.9839,30,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+01089,Madison County,AL,169034.4,0.9523,31,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+13217,Newton County,GA,164127.2,0.9247,32,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+19049,Dallas County,IA,162232.5,0.914,33,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+47157,Shelby County,TN,161518.2,0.91,34,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+51087,Henrico County,VA,144982.9,0.8168,35,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+39159,Union County,OH,136946.2,0.7715,36,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+17037,DeKalb County,IL,135367.2,0.7626,37,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+53017,Douglas County,WA,133626.0,0.7528,38,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+48453,Travis County,TX,127453.2,0.7181,39,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+32029,Storey County,NV,122290.1,0.689,40,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+34035,Somerset County,NJ,117993.3,0.6648,41,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+48085,Collin County,TX,113749.9,0.6409,42,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+19181,Warren County,IA,113306.0,0.6384,43,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+32031,Washoe County,NV,109242.8,0.6155,44,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+31055,Douglas County,NE,108489.8,0.6112,45,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+56021,Laramie County,WY,107382.4,0.605,46,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+37035,Catawba County,NC,90570.7,0.5103,47,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+53033,King County,WA,90291.2,0.5087,48,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+13097,Douglas County,GA,87875.5,0.4951,49,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+29047,Clay County,MO,85782.1,0.4833,50,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+48201,Harris County,TX,79345.8,0.447,51,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+28033,DeSoto County,MS,75526.0,0.4255,52,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+37161,Rutherford County,NC,74799.1,0.4214,53,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+36087,Rockland County,NY,73790.9,0.4157,54,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+53007,Chelan County,WA,67168.1,0.3784,55,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+13135,Gwinnett County,GA,65327.2,0.368,56,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+16001,Ada County,ID,63716.2,0.359,57,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+47125,Montgomery County,TN,63078.0,0.3554,58,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+06067,Sacramento County,CA,62048.5,0.3496,59,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+39043,Erie County,OH,58852.6,0.3316,60,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+27037,Dakota County,MN,55942.7,0.3152,61,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+06037,Los Angeles County,CA,53376.4,0.3007,62,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+13113,Fayette County,GA,52752.9,0.2972,63,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+20091,Johnson County,KS,51541.0,0.2904,64,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+08005,Arapahoe County,CO,47339.8,0.2667,65,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+49035,Salt Lake County,UT,43120.1,0.2429,66,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+29165,Platte County,MO,42855.0,0.2414,67,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+40143,Tulsa County,OK,39336.6,0.2216,68,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+13067,Cobb County,GA,38062.1,0.2144,69,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+08041,El Paso County,CO,35691.6,0.2011,70,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+39035,Cuyahoga County,OH,34564.1,0.1947,71,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+48121,Denton County,TX,29935.6,0.1687,72,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+39041,Delaware County,OH,28581.2,0.161,73,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+46099,Minnehaha County,SD,27786.2,0.1565,74,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+47037,Davidson County,TN,27430.4,0.1545,75,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+39045,Fairfield County,OH,26872.5,0.1514,76,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+01071,Jackson County,AL,26657.9,0.1502,77,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+06001,Alameda County,CA,26167.4,0.1474,78,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+39165,Warren County,OH,26125.8,0.1472,79,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+37119,Mecklenburg County,NC,25067.7,0.1412,80,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+25017,Middlesex County,MA,23934.1,0.1348,81,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+27053,Hennepin County,MN,23553.2,0.1327,82,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+51061,Fauquier County,VA,23468.3,0.1322,83,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+34031,Passaic County,NJ,22439.5,0.1264,84,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+48325,Medina County,TX,21265.2,0.1198,85,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+35001,Bernalillo County,NM,21092.9,0.1188,86,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+08035,Douglas County,CO,21080.1,0.1188,87,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+06073,San Diego County,CA,19666.6,0.1108,88,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+53053,Pierce County,WA,19446.9,0.1096,89,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+42091,Montgomery County,PA,19281.1,0.1086,90,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+34003,Bergen County,NJ,18655.3,0.1051,91,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+37183,Wake County,NC,18328.5,0.1033,92,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+34013,Essex County,NJ,18322.3,0.1032,93,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+42077,Lehigh County,PA,18138.7,0.1022,94,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+08014,Broomfield County,CO,17480.6,0.0985,95,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+06075,San Francisco County,CA,16609.6,0.0936,96,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+13117,Forsyth County,GA,16136.6,0.0909,97,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+06055,Napa County,CA,15123.8,0.0852,98,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+24031,Montgomery County,MD,13591.8,0.0766,99,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+47187,Williamson County,TN,13396.2,0.0755,100,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+12086,Miami-Dade County,FL,12870.4,0.0725,101,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+27019,Carver County,MN,12588.8,0.0709,102,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+09120,Greater Bridgeport Planning Region,CT,12540.2,0.0707,103,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+36085,Richmond County,NY,12396.4,0.0698,104,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+53061,Snohomish County,WA,12242.1,0.069,105,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+12057,Hillsborough County,FL,11889.3,0.067,106,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+48339,Montgomery County,TX,11717.0,0.066,107,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+24003,Anne Arundel County,MD,11450.4,0.0645,108,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+12011,Broward County,FL,11409.7,0.0643,109,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+06059,Orange County,CA,11401.3,0.0642,110,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+42101,Philadelphia County,PA,11116.7,0.0626,111,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+13215,Muscogee County,GA,10838.1,0.0611,112,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+18089,Lake County,IN,10778.1,0.0607,113,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+12095,Orange County,FL,10772.2,0.0607,114,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+40101,Muskogee County,OK,10448.4,0.0589,115,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+24027,Howard County,MD,10424.2,0.0587,116,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+27123,Ramsey County,MN,10052.2,0.0566,117,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+26163,Wayne County,MI,8984.2,0.0506,118,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+51683,Manassas city,VA,8917.5,0.0502,119,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+26045,Eaton County,MI,8911.4,0.0502,120,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+34039,Union County,NJ,8767.5,0.0494,121,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+18105,Monroe County,IN,8760.6,0.0494,122,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+45051,Horry County,SC,8542.1,0.0481,123,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+09190,Western Connecticut Planning Region,CT,8203.7,0.0462,124,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+42003,Allegheny County,PA,8124.2,0.0458,125,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+08001,Adams County,CO,7995.1,0.045,126,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+39023,Clark County,OH,7426.4,0.0418,127,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+36063,Niagara County,NY,7227.9,0.0407,128,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+39099,Mahoning County,OH,7002.9,0.0395,129,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+27003,Anoka County,MN,6884.2,0.0388,130,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+36061,New York County,NY,6799.3,0.0383,131,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+29510,St. Louis city,MO,6656.6,0.0375,132,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+21111,Jefferson County,KY,6625.8,0.0373,133,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+41047,Marion County,OR,6602.2,0.0372,134,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+08031,Denver County,CO,6372.6,0.0359,135,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+24021,Frederick County,MD,5947.9,0.0335,136,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+55015,Calumet County,WI,5590.9,0.0315,137,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+39153,Summit County,OH,5520.9,0.0311,138,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+23005,Cumberland County,ME,5145.2,0.029,139,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+06095,Solano County,CA,5134.8,0.0289,140,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+17097,Lake County,IL,5109.8,0.0288,141,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+19163,Scott County,IA,5015.2,0.0283,142,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+09170,South Central Connecticut Planning Region,CT,5013.7,0.0282,143,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+53063,Spokane County,WA,5009.2,0.0282,144,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+25009,Essex County,MA,4770.9,0.0269,145,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+27109,Olmsted County,MN,4488.8,0.0253,146,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+55133,Waukesha County,WI,4394.1,0.0248,147,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+17019,Champaign County,IL,4238.2,0.0239,148,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+24033,Prince George's County,MD,4000.1,0.0225,149,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+39061,Hamilton County,OH,3958.4,0.0223,150,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+36029,Erie County,NY,3896.2,0.022,151,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+41051,Multnomah County,OR,3860.7,0.0218,152,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+34015,Gloucester County,NJ,3814.4,0.0215,153,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+26125,Oakland County,MI,3769.4,0.0212,154,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+29019,Boone County,MO,3668.5,0.0207,155,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+48485,Wichita County,TX,3635.0,0.0205,156,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+26049,Genesee County,MI,3422.1,0.0193,157,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+36103,Suffolk County,NY,3413.8,0.0192,158,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+12001,Alachua County,FL,3378.9,0.019,159,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+24510,Baltimore city,MD,3159.7,0.0178,160,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+05119,Pulaski County,AR,2958.5,0.0167,161,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+35013,Doña Ana County,NM,2957.8,0.0167,162,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+35049,Santa Fe County,NM,2947.5,0.0166,163,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+33017,Strafford County,NH,2838.5,0.016,164,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+12031,Duval County,FL,2805.8,0.0158,165,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+27137,St. Louis County,MN,2523.4,0.0142,166,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+55079,Milwaukee County,WI,2424.7,0.0137,167,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+38017,Cass County,ND,2409.1,0.0136,168,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+34025,Monmouth County,NJ,2406.6,0.0136,169,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+36001,Albany County,NY,2398.8,0.0135,170,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+41005,Clackamas County,OR,2309.0,0.013,171,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+12105,Polk County,FL,2097.6,0.0118,172,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+18059,Hancock County,IN,1951.4,0.011,173,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+16065,Madison County,ID,1697.2,0.0096,174,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+33015,Rockingham County,NH,1583.9,0.0089,175,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+21071,Floyd County,KY,1448.7,0.0082,176,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+04019,Pima County,AZ,1335.3,0.0075,177,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+40013,Bryan County,OK,1253.6,0.0071,178,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+36119,Westchester County,NY,1247.3,0.007,179,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+48005,Angelina County,TX,1206.5,0.0068,180,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+49047,Uintah County,UT,1205.0,0.0068,181,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+36067,Onondaga County,NY,1130.5,0.0064,182,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+20051,Ellis County,KS,1074.1,0.0061,183,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+41017,Deschutes County,OR,1045.1,0.0059,184,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+01069,Houston County,AL,997.4,0.0056,185,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+55025,Dane County,WI,852.5,0.0048,186,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+55101,Racine County,WI,844.9,0.0048,187,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+55127,Walworth County,WI,836.2,0.0047,188,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+30017,Custer County,MT,789.0,0.0044,189,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+55077,Marquette County,WI,767.1,0.0043,190,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+04003,Cochise County,AZ,700.4,0.0039,191,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+06099,Stanislaus County,CA,559.0,0.0031,192,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+56005,Campbell County,WY,555.1,0.0031,193,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+05145,White County,AR,425.5,0.0024,194,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+53073,Whatcom County,WA,400.6,0.0023,195,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+16007,Bear Lake County,ID,379.1,0.0021,196,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+55033,Dunn County,WI,312.9,0.0018,197,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+19103,Johnson County,IA,251.7,0.0014,198,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+41043,Linn County,OR,234.2,0.0013,199,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+49053,Washington County,UT,170.3,0.001,200,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+30039,Granite County,MT,140.3,0.0008,201,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+29025,Caldwell County,MO,133.1,0.0008,202,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+47057,Grainger County,TN,114.5,0.0006,203,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+55021,Columbia County,WI,33.5,0.0002,204,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0
+17119,Madison County,IL,19.0,0.0001,205,PNNL IM3 Open Source Data Center Atlas v2026.02.09 (https://www.osti.gov/biblio/2550666); © OpenStreetMap contributors; ODbL 1.0

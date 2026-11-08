@@ -1,0 +1,10 @@
+Side,Who,What,Figure,When,Source
+Wins,Data-center operators (Va.),"Sales and use tax exemption, self-reported",$1.94B,FY2025,"[Va. Dept. of Taxation, p. 4](https://rga.lis.virginia.gov/Published/2026/RD40/PDF#page=4)"
+Wins,Virginia workers,"Jobs supported per year, incl. indirect and induced","74,000 (59,000 in construction)",Annual average,"[JLARC, pp. 32, 34](https://jlarc.virginia.gov/pdfs/reports/Rpt598-2.pdf#page=32)"
+Pays,Virginia taxpayers,State revenue returned per $1 of exemption,48¢,Annual average,"[JLARC, p. 41](https://jlarc.virginia.gov/pdfs/reports/Rpt598-2.pdf#page=41)"
+Pays,Data-center operators (Va.),New electricity consumption tax,"1.1¢/kWh, capped at $600M a year",From July 2026,[Williams Mullen (HB 30 summary)](https://www.williamsmullen.com/insights/news/legal-news/virginia-budget-creates-new-electricity-consumption-tax-data-centers)
+Pays,PJM electricity customers,"Capacity charges tied to data-center load, last four auctions",$29.4B (46.2% of the total),Through 2028/29,"[Monitoring Analytics, p. 4](https://www.monitoringanalytics.com/reports/Presentations/2026/IMM_MC_Market_Monitor_Report_20260728.pdf#page=4)"
+Pays,"Households, western Maryland",Capacity-price effect on average residential bill,+$18 a month,2025/26,[IEEFA](https://ieefa.org/resources/projected-data-center-growth-spurs-pjm-capacity-prices-factor-10)
+Pays,"Households, Maryland (BGE)","Bill increase, last two auctions combined",+$16.49 a month,2026/27 vs. 2024/25,[Maryland OPC](https://content.govdelivery.com/accounts/MDOPC/bulletins/3ead2f8)
+Context,U.S. grid,Data-center share of U.S. electricity,4.7% → 11.8% (projected),2024 → 2030,"[LBNL 2025 Update, pp. 7, 10](https://escholarship.org/content/qt33m6w3x0/qt33m6w3x0.pdf#page=10)"
+Context,Data-center developers,Projects blocked or delayed by local opposition,$64B,2023 – Q1 2025,[Data Center Watch](https://www.datacenterwatch.org/report)

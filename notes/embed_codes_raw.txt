@@ -1,0 +1,9 @@
+d2: https://datawrapper.dwcdn.net/VEC9a/2/
+d1: https://datawrapper.dwcdn.net/1UF89/1/
+d3: https://datawrapper.dwcdn.net/we7PO/1/
+d4: https://datawrapper.dwcdn.net/nwkgu/1/
+
+f1: <div class="flourish-embed flourish-chart" data-src="visualisation/30840499"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/30840499/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+f2: <div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/30840369"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/30840369/thumbnail" width="100%" alt="bar-chart-race visualization" /></noscript></div>
+f3: <div class="flourish-embed flourish-pictogram" data-src="visualisation/30840415"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/30840415/thumbnail" width="100%" alt="pictogram visualization" /></noscript></div>
+f4: <div class="flourish-embed flourish-chart" data-src="visualisation/30840465"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/30840465/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
