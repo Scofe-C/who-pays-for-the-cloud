@@ -12,3 +12,6 @@ Thumbs.db
 .idea/
 # raw downloads stay local (licensing); full history incl. raw is on local branch 'full'
 data/raw/
+
+# team build guide with member details (local only)
+notes/SITE_BUILD.md

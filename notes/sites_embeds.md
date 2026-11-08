@@ -1,4 +1,4 @@
-# Google Sites embeds (15, in story order)
+# Google Sites embeds (15 in story order, plus the Methods-page index)
 
 How to paste:
 - **iframe snippets:** in Google Sites use **Insert → Embed → Embed code**, paste the snippet, then drag the box to the height shown.
@@ -113,6 +113,14 @@ Height 770 px (phone 900)
 Height 700 px, **adjust** (searchable table, 9 rows)
 ```html
 <iframe src="https://datawrapper.dwcdn.net/nwkgu/1/" title="So who wins, and who pays?" style="width:100%;height:700px;border:0" loading="lazy"></iframe>
+```
+
+## Methods page
+
+### INDEX (GitHub Pages chart index)
+Height 1,670 px (phone 3,250). It's a long page, so a shorter box with inner scrolling is fine here.
+```html
+<iframe src="https://scofe-c.github.io/who-pays-for-the-cloud/" title="Chart inventory, colors and fonts" style="width:100%;height:1670px;border:0" loading="lazy"></iframe>
 ```
 
 ---
