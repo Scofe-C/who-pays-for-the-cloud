@@ -29,6 +29,8 @@ SOURCES = {  # prefix: URL (DATA_SOURCES.md §C, verbatim)
     "peco": "https://www.phillyvoice.com/peco-bill-increase-supply-costs/",
     "dcw": "https://www.datacenterwatch.org/report",
     "scc": "https://www.scc.virginia.gov/about-the-scc/newsreleases/release/scc-issues-order-on-dev-biennial-review-2025/scc-rules-in-dev-biennial-review-case.html",
+    "lbnlbrattle25": "https://eta-publications.lbl.gov/sites/default/files/2025-10/full_summary_retail_price_trends_drivers.pdf",  # P1 text
+    "pjmabout": "https://www.pjm.com/en/about-pjm/who-we-are/",  # states served (story text)
 }
 # Honest generic client only. Sites that block it are left for the human to download manually.
 
