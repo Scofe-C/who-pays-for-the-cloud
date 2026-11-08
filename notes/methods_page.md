@@ -18,11 +18,11 @@ Paste-ready text for the Methods page. Items marked **[confirm]** need your chec
 | Price caps, forecasts (lines only; text in this role uses #7A5C14) | #C99A2E |
 | De-emphasized data | #BFB8AC |
 
-The data-center map (DW1) and the opening hex map use a six-step blue scale. The breaks are 1, 10, 50, 100 and 200 records, and the colors are #E9ECEF, #C3CED8, #93A8BC, #62809D, #3C5A78 and #1E3348.
+The data-center map (DW1) uses a six-step blue scale. The breaks are 1, 10, 50, 100 and 200 records, and the colors are #E9ECEF, #C3CED8, #93A8BC, #62809D, #3C5A78 and #1E3348.
 
 ## Fonts
 
-- **Charts built in code** (Plotly P1–P3, custom HTML H1–H3, opening map):
+- **Charts built in code** (Plotly P1–P3, custom HTML H1–H3, opening illustration):
   - Source Serif 4 for titles.
   - Source Sans 3 for body text and labels.
   - IBM Plex Mono for numbers and source lines.
@@ -38,7 +38,7 @@ The data-center map (DW1) and the opening hex map use a six-step blue scale. The
 - **Flourish (4):** F1, F2, F3, F4.
 - **Plotly (3):** P1, P2, P3.
 - **Custom HTML/SVG (3):** H1, H2, H3.
-- **Opening map:** an extra custom HTML/SVG piece that isn't counted as a chart.
+- **Opening illustration:** an extra decorative custom HTML/SVG piece that isn't counted as a chart.
 
 The Plotly and custom HTML charts are hosted on GitHub Pages: https://scofe-c.github.io/who-pays-for-the-cloud/
 

@@ -45,13 +45,16 @@ Build: `python scripts/build_charts.py`, output in `docs/charts/`. Preview: `pyt
 - [ ] The report toggle buttons fade each column in or out.
 - Reviewed by: ____  Date: ____
 
-## Hero: hex tile map (`docs/hero.html`)
-- [ ] Tile colors use the DW1 steps (breaks 1 / 10 / 50 / 100 / 200), computed from `data/clean/dw1_state_counts.csv`. Spot-check a few states against DW1.
-- [ ] Virginia (319 records) is drawn in #B3452C instead of its step color. It is the only state in the 200+ step, so the darkest blue (#1E3348) doesn't appear on the map.
-- [ ] The tile positions are the standard 11 × 8 US tile grid. Odd rows are offset half a tile to make the hexagon tiling, so some neighbors shift slightly (for example, DC sits next to SC).
-- [ ] No text except state abbreviations and the attribution footer. The aria-label is generated from the data (total, top 5, number of states with zero).
-- [ ] With "reduce motion" on, the pulse and the Virginia ring stop.
-- [ ] At 380 px the map is about 240 px tall and the labels are about 10 px. Check that this is readable on a phone, and set the Sites iframe height (≤ 420 px).
+## Hero: converging current, version A (`docs/hero.html`)
+- [ ] The drawing is decorative, and the caption "Illustration. Lines are decorative." is visible.
+- [ ] The only figure is "25.59% of Virginia’s electricity went to data centers in 2023 (EPRI)". It is read at build time from facts.csv `epri24_va_share`, and the build fails if that row isn't verified.
+- [ ] Composition follows SITE_BUILD Part 1:
+  - 18 curves converging at (896, 300), with the red dashed current flowing;
+  - a pulsing dot and ring at the convergence point;
+  - a 3 × 3 grid of halls with green status lights that blink.
+- [ ] Deviation from the spec: the viewBox runs from x = −800 (straight lead-in lines) instead of 0, so the drawing still scales by height up to about 1,600 px wide. With x = 0 the text overlapped the halls at 1,400 px.
+- [ ] With "reduce motion" on, the current, ring and lights stop and the ring is hidden.
+- [ ] At 380 px the graphic is 300 px tall and cropped on the left. The halls, the pulse and both text lines are visible, and the page is about 390 px tall in total, so a 420 px Sites box fits on both desktop and phone.
 - Reviewed by: ____  Date: ____
 
 ## Checks done by Claude Code (2026-11-07)
@@ -59,4 +62,4 @@ Build: `python scripts/build_charts.py`, output in `docs/charts/`. Preview: `pyt
 - P1 highlight menu tested by script: 37 grey markers, 14 red (8 filled, 6 open), and the key appears.
 - Not checked: real phones, hover on touch devices, and the Google Sites embed (Phase 0 spike; iframe height still unknown).
 - H1–H3 (2026-11-07): rendered at 900 px and in a 380 px iframe. A script tested H1 year buttons (note and aria-pressed), the H2 cap toggle (line appears, button text flips) and an H3 report toggle (column fades). Hover tooltips not tested on touch devices.
-- Hero (2026-11-07): rendered at 900 px with reduced motion, inside 380 px and 1200 px iframes. No horizontal scroll, and the footer wraps at 380 px. The animation was not checked frame by frame.
+- Hero, version A (2026-11-07): rendered at 900, 1,400 and 1,600 px, inside a 380 px iframe, and at 900 px with forced reduced motion. No overlap and no horizontal scroll. The animation was not checked frame by frame. (This replaces the hex-map check.)

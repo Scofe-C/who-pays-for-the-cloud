@@ -14,9 +14,9 @@ GitHub Pages base: https://scofe-c.github.io/who-pays-for-the-cloud/
 ---
 
 ## 0. Hero (custom HTML/SVG)
-Height 420 px (phone: map ≈ 300 px)
+Height 420 px (phone: 300 px graphic + text ≈ 390 px, fits)
 ```html
-<iframe src="https://scofe-c.github.io/who-pays-for-the-cloud/hero.html" title="Data center records by state" style="width:100%;height:420px;border:0" loading="lazy"></iframe>
+<iframe src="https://scofe-c.github.io/who-pays-for-the-cloud/hero.html" title="Animated illustration: electric current converging on data centers in Loudoun County, Virginia" style="width:100%;height:420px;border:0" loading="lazy"></iframe>
 ```
 
 ## Act 1: Scale

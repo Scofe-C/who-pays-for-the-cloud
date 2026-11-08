@@ -11,7 +11,6 @@ from __future__ import annotations
 import html
 import json
 import logging
-import math
 import re
 import sys
 from pathlib import Path
@@ -692,11 +691,11 @@ def index() -> None:
         return (f'<span style="display:inline-block;width:1.2em;height:1.2em;background:{h};'
                 f'border:1px solid {TEXT2};vertical-align:middle"></span>')
     swatches = "".join(f"<tr><td>{chip(h)}</td><td>{n}</td><td><code>{h}</code></td></tr>" for n, h in sw)
-    seq = " ".join(f"{chip(h)} <code>{h}</code>" for h in HERO_COLORS)
-    body = ('<p>Story intro: <a href="hero.html">hero map</a> (custom HTML/SVG, no chart ID).</p>'
+    seq = " ".join(f"{chip(h)} <code>{h}</code>" for h in DW1_SCALE)
+    body = ('<p>Story intro: <a href="hero.html">hero illustration</a> (custom HTML/SVG, decorative, not counted as a chart).</p>'
             f'<table><thead><tr><th>ID</th><th>Tool</th><th>Title</th><th>Link</th></tr></thead><tbody>{trs}</tbody></table>'
             f'<h2>Colors</h2><table><tbody>{swatches}</tbody></table>'
-            f'<p>Sequential scale for DW1 and the hero map (breaks 1, 10, 50, 100, 200 records): {seq}</p>'
+            f'<p>Sequential scale for DW1 (breaks 1, 10, 50, 100, 200 records): {seq}</p>'
             '<h2>Fonts</h2><ul><li>Source Serif 4: titles</li><li>Source Sans 3: body text and labels</li>'
             '<li>IBM Plex Mono: numbers and source lines</li></ul>'
             '<p>Fallbacks: Georgia, Arial, Courier New. Fonts are served by Google Fonts. '
@@ -712,93 +711,98 @@ def index() -> None:
 
 
 # ---------------------------------------------------------------- Hero (docs/hero.html)
-# Standard 11 x 8 US tile grid (layout constant, not data): state -> (col, row). Odd rows are offset
-# half a tile to the right to make the hexagon tiling.
-TILE_GRID = {
-    "AK": (0, 0), "ME": (10, 0),
-    "VT": (9, 1), "NH": (10, 1),
-    "WA": (0, 2), "ID": (1, 2), "MT": (2, 2), "ND": (3, 2), "MN": (4, 2), "IL": (5, 2), "WI": (6, 2),
-    "MI": (7, 2), "NY": (8, 2), "RI": (9, 2), "MA": (10, 2),
-    "OR": (0, 3), "NV": (1, 3), "WY": (2, 3), "SD": (3, 3), "IA": (4, 3), "IN": (5, 3), "OH": (6, 3),
-    "PA": (7, 3), "NJ": (8, 3), "CT": (9, 3),
-    "CA": (0, 4), "UT": (1, 4), "CO": (2, 4), "NE": (3, 4), "MO": (4, 4), "KY": (5, 4), "WV": (6, 4),
-    "VA": (7, 4), "MD": (8, 4), "DE": (9, 4),
-    "AZ": (1, 5), "NM": (2, 5), "KS": (3, 5), "AR": (4, 5), "TN": (5, 5), "NC": (6, 5), "SC": (7, 5),
-    "DC": (8, 5),
-    "OK": (3, 6), "LA": (4, 6), "MS": (5, 6), "AL": (6, 6), "GA": (7, 6),
-    "HI": (0, 7), "TX": (3, 7), "FL": (8, 7),
-}
-# Same 6 steps as DW1: breaks 1, 10, 50, 100, 200 (value < break -> that step).
-HERO_BREAKS = [1, 10, 50, 100, 200]
-HERO_COLORS = ["#E9ECEF", "#C3CED8", "#93A8BC", "#62809D", "#3C5A78", "#1E3348"]
-HERO_DARK = {"#62809D", "#3C5A78", "#1E3348", COST}  # white labels on these fills
-
-
-def hero_step(n: int) -> int:
-    return sum(n >= b for b in HERO_BREAKS)
+# Version A, "converging current" (notes/SITE_BUILD.md Part 1). Decorative illustration: the only data
+# value is the Virginia share, read from facts.csv (epri24_va_share). Geometry below is layout, not data.
+DW1_SCALE = ["#E9ECEF", "#C3CED8", "#93A8BC", "#62809D", "#3C5A78", "#1E3348"]  # set in Datawrapper; listed on index
+HERO_POINT = (896, 300)          # convergence point in the 1200 x 520 viewBox
+HERO_HALL = (70, 44, 14)         # hall width, height, gap
+HERO_LINES = 18
+HERO_LEAD = 800              # viewBox extends this far left of the spec's x=0
 
 
 def hero() -> None:
-    d = pd.read_csv(CLEAN / "dw1_state_counts.csv")
-    counts = dict(zip(d["state"], d["facilities"].astype(int)))
-    if set(counts) != set(TILE_GRID):
-        fail(f"hero: states differ from tile grid: {sorted(set(counts) ^ set(TILE_GRID))}")
-    w = 60.0                      # tile width (pointy-top hexagon)
-    r = w / math.sqrt(3)          # circumradius
-    pad = 24.0
-    vw = 11.5 * w + 2 * pad
-    vh = 7 * 1.5 * r + 2 * r + 2 * pad
-
-    def pts(cx: float, cy: float, rad: float) -> str:
-        return " ".join(f"{cx + rad * math.cos(math.radians(a)):.1f},{cy + rad * math.sin(math.radians(a)):.1f}"
-                        for a in range(-90, 270, 60))
-
-    tiles, ring = [], ""
-    for st, (c, row) in sorted(TILE_GRID.items(), key=lambda kv: (kv[1][1], kv[1][0])):
-        cx = pad + w * (c + 0.5 + 0.5 * (row % 2))
-        cy = pad + r + row * 1.5 * r
-        fill = COST if st == "VA" else HERO_COLORS[hero_step(counts[st])]
-        ink = "#FFFFFF" if fill in HERO_DARK else TEXT
-        delay = -((c + row) * 0.23) % 3.2  # negative delay: staggered, already moving on load
-        tiles.append(f'<g class="t" style="animation-delay:{delay:.2f}s"><polygon points="{pts(cx, cy, r * 0.94)}" '
-                     f'fill="{fill}"/><text x="{cx:.1f}" y="{cy + 7:.1f}" fill="{ink}">{st}</text></g>')
-        if st == "VA":
-            ring = f'<polygon class="ring" points="{pts(cx, cy, r * 0.94)}"/>'
-    top = d.sort_values("facilities", ascending=False).head(5)
-    aria = ("Hex tile map of the United States, one hexagon per state plus D.C., shaded by the number of "
-            f"mapped data center records in the PNNL IM3 Atlas ({int(d['facilities'].sum()):,} in total). "
-            "Most records: " + ", ".join(f"{s} {n}" for s, n in zip(top["state"], top["facilities"].astype(int)))
-            + f". Virginia is highlighted. {int((d['facilities'] == 0).sum())} states have none.")
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import build_manual_csvs as bm  # reuse facts loading + verified_by gate
+    share = bm.Facts(bm.load()).row("epri24_va_share")["value"].strip()
+    float(share)  # fail loudly if the stored value is not numeric
+    px, py = HERO_POINT
+    curves = []
+    for i in range(HERO_LINES):
+        y0 = 28 + i * (500 - 28) / (HERO_LINES - 1)
+        # straight lead-in from x=-HERO_LEAD so wide screens (up to ~1,600 px at 420 px tall) scale by height
+        d = f"M{-HERO_LEAD},{y0:.1f} L0,{y0:.1f} C{px * 0.42:.0f},{y0:.1f} {px * 0.70:.0f},{py} {px},{py}"
+        delay = -((i * 7) % HERO_LINES) / HERO_LINES * 2.6
+        curves.append(f'<path class="base" d="{d}"/><path class="cur" d="{d}" style="animation-delay:{delay:.2f}s"/>')
+    hw, hh, gap = HERO_HALL
+    x0, y0 = px + 34, py - (3 * hh + 2 * gap) / 2
+    halls = []
+    for k in range(9):
+        r, c = divmod(k, 3)
+        x, y = x0 + c * (hw + gap), y0 + r * (hh + gap)
+        lines = "".join(f'<line x1="{x + 10:.0f}" x2="{x + hw - 18:.0f}" y1="{y + 13 + j * 9:.0f}" y2="{y + 13 + j * 9:.0f}"/>'
+                        for j in range(3))
+        dur = 1.2 + ((k * 5) % 7) / 6 * 0.6
+        halls.append(f'<rect x="{x:.0f}" y="{y:.0f}" width="{hw}" height="{hh}"/>{lines}'
+                     f'<circle class="led" cx="{x + hw - 9:.0f}" cy="{y + 9:.0f}" r="3" style="animation-duration:{dur:.2f}s"/>')
+    aria = ("Animated lines of electric current converging on a cluster of data center buildings in "
+            "Loudoun County, Virginia")
     html = f"""<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Data center records by state</title>
+<title>Converging current: Loudoun County</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{FONTS}">
 <style>
   html, body {{ margin: 0; background: {BG}; }}
-  .hero {{ max-height: 420px; overflow: hidden; display: flex; flex-direction: column; align-items: center; }}
-  svg {{ display: block; width: 100%; height: auto; max-height: 392px; overflow: visible; }}
-  text {{ font-family: {SANS}; font-weight: 600; font-size: 21px; text-anchor: middle; pointer-events: none; }}
-  .t {{ animation: pulse 3.2s ease-in-out infinite alternate; }}
-  .ring {{ fill: none; stroke: {COST}; stroke-width: 3; transform-box: fill-box; transform-origin: center;
-          animation: ring 3.6s ease-out infinite; }}
-  @keyframes pulse {{ from {{ opacity: .85; }} to {{ opacity: 1; }} }}
-  @keyframes ring {{ 0% {{ transform: scale(1); opacity: .9; }} 100% {{ transform: scale(1.75); opacity: 0; }} }}
-  @media (prefers-reduced-motion: reduce) {{ .t, .ring {{ animation: none; }} .ring {{ opacity: 0; }} }}
-  .foot {{ font-family: {MONO}; font-size: 11px; color: {TEXT2}; padding: 2px 16px 8px; text-align: center; }}
+  .hero {{ position: relative; height: 420px; overflow: hidden; }}
+  .art {{ position: absolute; inset: 0; }}
+  svg {{ display: block; width: 100%; height: 100%; }}
+  .base {{ fill: none; stroke: {GRID}; stroke-width: 1.2; }}
+  .cur {{ fill: none; stroke: {COST}; stroke-opacity: .8; stroke-width: 1.6; stroke-dasharray: 4 22;
+         animation: flow 2.6s linear infinite; }}
+  .dot {{ fill: {COST}; }}
+  .ring {{ fill: none; stroke: {COST}; stroke-width: 1.5; transform-box: fill-box; transform-origin: center;
+          animation: ring 2.4s ease-out infinite; }}
+  rect {{ fill: {BG}; stroke: {TEXT}; stroke-width: 1.25; }}
+  line {{ stroke: {MUTED}; stroke-width: 1; }}
+  .led {{ fill: {GAIN}; animation: blink 1.5s ease-in-out infinite alternate; }}
+  @keyframes flow {{ from {{ stroke-dashoffset: 0; }} to {{ stroke-dashoffset: -260; }} }}
+  @keyframes ring {{ from {{ transform: scale(1); opacity: .7; }} to {{ transform: scale(4.5); opacity: 0; }} }}
+  @keyframes blink {{ from {{ opacity: .35; }} to {{ opacity: 1; }} }}
+  .text {{ position: absolute; right: 24px; bottom: 34px; max-width: 420px; text-align: right; }}
+  .place {{ font-family: {MONO}; font-size: 13px; letter-spacing: .1em; color: {TEXT}; margin: 0 0 4px; }}
+  .fact {{ font-family: {SANS}; font-size: 15px; color: {TEXT2}; margin: 0; }}
+  .cap {{ position: absolute; left: 16px; bottom: 8px; font-family: {MONO}; font-size: 11px; color: {TEXT2}; margin: 0; }}
+  @media (max-width: 599px) {{
+    .hero {{ height: auto; overflow: visible; }}
+    .art {{ position: relative; height: 300px; overflow: hidden; }}
+    .text {{ position: static; max-width: none; text-align: left; padding: 10px 16px 0; }}
+    .cap {{ position: static; padding: 8px 16px 10px; }}
+  }}
+  @media (prefers-reduced-motion: reduce) {{
+    .cur, .ring, .led {{ animation: none; }}
+    .ring {{ opacity: 0; }}
+  }}
 </style>
 </head>
 <body>
 <div class="hero">
-<svg viewBox="0 0 {vw:.0f} {vh:.0f}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="{esc(aria)}">
-{ring}
-{chr(10).join(tiles)}
+<div class="art">
+<svg viewBox="{-HERO_LEAD} 0 {1200 + HERO_LEAD} 520" preserveAspectRatio="xMaxYMid slice" role="img" aria-label="{esc(aria)}">
+{chr(10).join(curves)}
+<circle class="dot" cx="{px}" cy="{py}" r="7"/>
+<circle class="ring" cx="{px}" cy="{py}" r="7"/>
+{chr(10).join(halls)}
 </svg>
-<div class="foot">Data center records by state. PNNL IM3 Atlas; © OpenStreetMap contributors (ODbL)</div>
+</div>
+<div class="text">
+<p class="place">LOUDOUN COUNTY, VA.</p>
+<p class="fact">{esc(share)}% of Virginia’s electricity went to data centers in 2023 (EPRI).</p>
+</div>
+<p class="cap">Illustration. Lines are decorative.</p>
 </div>
 </body>
 </html>
