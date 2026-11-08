@@ -717,7 +717,6 @@ DW1_SCALE = ["#E9ECEF", "#C3CED8", "#93A8BC", "#62809D", "#3C5A78", "#1E3348"]  
 HERO_POINT = (896, 300)          # convergence point in the 1200 x 520 viewBox
 HERO_HALL = (70, 44, 14)         # hall width, height, gap
 HERO_LINES = 18
-HERO_LEAD = 800              # viewBox extends this far left of the spec's x=0
 
 
 def hero() -> None:
@@ -729,8 +728,7 @@ def hero() -> None:
     curves = []
     for i in range(HERO_LINES):
         y0 = 28 + i * (500 - 28) / (HERO_LINES - 1)
-        # straight lead-in from x=-HERO_LEAD so wide screens (up to ~1,600 px at 420 px tall) scale by height
-        d = f"M{-HERO_LEAD},{y0:.1f} L0,{y0:.1f} C{px * 0.42:.0f},{y0:.1f} {px * 0.70:.0f},{py} {px},{py}"
+        d = f"M0,{y0:.1f} C{px * 0.42:.0f},{y0:.1f} {px * 0.70:.0f},{py} {px},{py}"
         delay = -((i * 7) % HERO_LINES) / HERO_LINES * 2.6
         curves.append(f'<path class="base" d="{d}"/><path class="cur" d="{d}" style="animation-delay:{delay:.2f}s"/>')
     hw, hh, gap = HERO_HALL
@@ -772,7 +770,9 @@ def hero() -> None:
   @keyframes flow {{ from {{ stroke-dashoffset: 0; }} to {{ stroke-dashoffset: -260; }} }}
   @keyframes ring {{ from {{ transform: scale(1); opacity: .7; }} to {{ transform: scale(4.5); opacity: 0; }} }}
   @keyframes blink {{ from {{ opacity: .35; }} to {{ opacity: 1; }} }}
-  .text {{ position: absolute; right: 24px; bottom: 34px; max-width: 420px; text-align: right; }}
+  /* below the halls at any width: scale s = max(W/1200, 420/520); halls end 120*s below centre, 32*s from the right */
+  .text {{ position: absolute; top: calc(222px + max(10vw, 96.92px)); right: max(2.667vw, 25.85px);
+          max-width: 420px; text-align: right; }}
   .place {{ font-family: {MONO}; font-size: 13px; letter-spacing: .1em; color: {TEXT}; margin: 0 0 4px; }}
   .fact {{ font-family: {SANS}; font-size: 15px; color: {TEXT2}; margin: 0; }}
   .cap {{ position: absolute; left: 16px; bottom: 8px; font-family: {MONO}; font-size: 11px; color: {TEXT2}; margin: 0; }}
@@ -791,7 +791,7 @@ def hero() -> None:
 <body>
 <div class="hero">
 <div class="art">
-<svg viewBox="{-HERO_LEAD} 0 {1200 + HERO_LEAD} 520" preserveAspectRatio="xMaxYMid slice" role="img" aria-label="{esc(aria)}">
+<svg viewBox="0 0 1200 520" preserveAspectRatio="xMaxYMid slice" role="img" aria-label="{esc(aria)}">
 {chr(10).join(curves)}
 <circle class="dot" cx="{px}" cy="{py}" r="7"/>
 <circle class="ring" cx="{px}" cy="{py}" r="7"/>

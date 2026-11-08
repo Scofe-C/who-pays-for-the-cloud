@@ -52,7 +52,7 @@ Build: `python scripts/build_charts.py`, output in `docs/charts/`. Preview: `pyt
   - 18 curves converging at (896, 300), with the red dashed current flowing;
   - a pulsing dot and ring at the convergence point;
   - a 3 × 3 grid of halls with green status lights that blink.
-- [ ] Deviation from the spec: the viewBox runs from x = −800 (straight lead-in lines) instead of 0, so the drawing still scales by height up to about 1,600 px wide. With x = 0 the text overlapped the halls at 1,400 px.
+- [ ] Built exactly to Part 1: viewBox 0 0 1200 520, curves start at x = 0. To keep the text below the halls at every width, its position is computed in CSS from the drawing scale. Above about 1,450 px wide the text would run past the 420 px box, which is wider than a Google Sites content column.
 - [ ] With "reduce motion" on, the current, ring and lights stop and the ring is hidden.
 - [ ] At 380 px the graphic is 300 px tall and cropped on the left. The halls, the pulse and both text lines are visible, and the page is about 390 px tall in total, so a 420 px Sites box fits on both desktop and phone.
 - Reviewed by: ____  Date: ____
@@ -62,4 +62,4 @@ Build: `python scripts/build_charts.py`, output in `docs/charts/`. Preview: `pyt
 - P1 highlight menu tested by script: 37 grey markers, 14 red (8 filled, 6 open), and the key appears.
 - Not checked: real phones, hover on touch devices, and the Google Sites embed (Phase 0 spike; iframe height still unknown).
 - H1–H3 (2026-11-07): rendered at 900 px and in a 380 px iframe. A script tested H1 year buttons (note and aria-pressed), the H2 cap toggle (line appears, button text flips) and an H3 report toggle (column fades). Hover tooltips not tested on touch devices.
-- Hero, version A (2026-11-07): rendered at 900, 1,400 and 1,600 px, inside a 380 px iframe, and at 900 px with forced reduced motion. No overlap and no horizontal scroll. The animation was not checked frame by frame. (This replaces the hex-map check.)
+- Hero, version A (2026-11-07): rendered at 900, 1,280 and 1,400 px, inside a 380 px iframe, and at 900 px with forced reduced motion. No overlap and no horizontal scroll. The animation was not checked frame by frame. (This replaces the hex-map check.)

@@ -24,7 +24,9 @@
   @keyframes flow { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -260; } }
   @keyframes ring { from { transform: scale(1); opacity: .7; } to { transform: scale(4.5); opacity: 0; } }
   @keyframes blink { from { opacity: .35; } to { opacity: 1; } }
-  .text { position: absolute; right: 24px; bottom: 34px; max-width: 420px; text-align: right; }
+  /* below the halls at any width: scale s = max(W/1200, 420/520); halls end 120*s below centre, 32*s from the right */
+  .text { position: absolute; top: calc(222px + max(10vw, 96.92px)); right: max(2.667vw, 25.85px);
+          max-width: 420px; text-align: right; }
   .place { font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 13px; letter-spacing: .1em; color: #1F1F1F; margin: 0 0 4px; }
   .fact { font-family: 'Source Sans 3', Arial, sans-serif; font-size: 15px; color: #5E5E5E; margin: 0; }
   .cap { position: absolute; left: 16px; bottom: 8px; font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 11px; color: #5E5E5E; margin: 0; }
@@ -43,25 +45,25 @@
 <body>
 <div class="hero">
 <div class="art">
-<svg viewBox="-800 0 2000 520" preserveAspectRatio="xMaxYMid slice" role="img" aria-label="Animated lines of electric current converging on a cluster of data center buildings in Loudoun County, Virginia">
-<path class="base" d="M-800,28.0 L0,28.0 C376,28.0 627,300 896,300"/><path class="cur" d="M-800,28.0 L0,28.0 C376,28.0 627,300 896,300" style="animation-delay:0.00s"/>
-<path class="base" d="M-800,55.8 L0,55.8 C376,55.8 627,300 896,300"/><path class="cur" d="M-800,55.8 L0,55.8 C376,55.8 627,300 896,300" style="animation-delay:-1.01s"/>
-<path class="base" d="M-800,83.5 L0,83.5 C376,83.5 627,300 896,300"/><path class="cur" d="M-800,83.5 L0,83.5 C376,83.5 627,300 896,300" style="animation-delay:-2.02s"/>
-<path class="base" d="M-800,111.3 L0,111.3 C376,111.3 627,300 896,300"/><path class="cur" d="M-800,111.3 L0,111.3 C376,111.3 627,300 896,300" style="animation-delay:-0.43s"/>
-<path class="base" d="M-800,139.1 L0,139.1 C376,139.1 627,300 896,300"/><path class="cur" d="M-800,139.1 L0,139.1 C376,139.1 627,300 896,300" style="animation-delay:-1.44s"/>
-<path class="base" d="M-800,166.8 L0,166.8 C376,166.8 627,300 896,300"/><path class="cur" d="M-800,166.8 L0,166.8 C376,166.8 627,300 896,300" style="animation-delay:-2.46s"/>
-<path class="base" d="M-800,194.6 L0,194.6 C376,194.6 627,300 896,300"/><path class="cur" d="M-800,194.6 L0,194.6 C376,194.6 627,300 896,300" style="animation-delay:-0.87s"/>
-<path class="base" d="M-800,222.4 L0,222.4 C376,222.4 627,300 896,300"/><path class="cur" d="M-800,222.4 L0,222.4 C376,222.4 627,300 896,300" style="animation-delay:-1.88s"/>
-<path class="base" d="M-800,250.1 L0,250.1 C376,250.1 627,300 896,300"/><path class="cur" d="M-800,250.1 L0,250.1 C376,250.1 627,300 896,300" style="animation-delay:-0.29s"/>
-<path class="base" d="M-800,277.9 L0,277.9 C376,277.9 627,300 896,300"/><path class="cur" d="M-800,277.9 L0,277.9 C376,277.9 627,300 896,300" style="animation-delay:-1.30s"/>
-<path class="base" d="M-800,305.6 L0,305.6 C376,305.6 627,300 896,300"/><path class="cur" d="M-800,305.6 L0,305.6 C376,305.6 627,300 896,300" style="animation-delay:-2.31s"/>
-<path class="base" d="M-800,333.4 L0,333.4 C376,333.4 627,300 896,300"/><path class="cur" d="M-800,333.4 L0,333.4 C376,333.4 627,300 896,300" style="animation-delay:-0.72s"/>
-<path class="base" d="M-800,361.2 L0,361.2 C376,361.2 627,300 896,300"/><path class="cur" d="M-800,361.2 L0,361.2 C376,361.2 627,300 896,300" style="animation-delay:-1.73s"/>
-<path class="base" d="M-800,388.9 L0,388.9 C376,388.9 627,300 896,300"/><path class="cur" d="M-800,388.9 L0,388.9 C376,388.9 627,300 896,300" style="animation-delay:-0.14s"/>
-<path class="base" d="M-800,416.7 L0,416.7 C376,416.7 627,300 896,300"/><path class="cur" d="M-800,416.7 L0,416.7 C376,416.7 627,300 896,300" style="animation-delay:-1.16s"/>
-<path class="base" d="M-800,444.5 L0,444.5 C376,444.5 627,300 896,300"/><path class="cur" d="M-800,444.5 L0,444.5 C376,444.5 627,300 896,300" style="animation-delay:-2.17s"/>
-<path class="base" d="M-800,472.2 L0,472.2 C376,472.2 627,300 896,300"/><path class="cur" d="M-800,472.2 L0,472.2 C376,472.2 627,300 896,300" style="animation-delay:-0.58s"/>
-<path class="base" d="M-800,500.0 L0,500.0 C376,500.0 627,300 896,300"/><path class="cur" d="M-800,500.0 L0,500.0 C376,500.0 627,300 896,300" style="animation-delay:-1.59s"/>
+<svg viewBox="0 0 1200 520" preserveAspectRatio="xMaxYMid slice" role="img" aria-label="Animated lines of electric current converging on a cluster of data center buildings in Loudoun County, Virginia">
+<path class="base" d="M0,28.0 C376,28.0 627,300 896,300"/><path class="cur" d="M0,28.0 C376,28.0 627,300 896,300" style="animation-delay:0.00s"/>
+<path class="base" d="M0,55.8 C376,55.8 627,300 896,300"/><path class="cur" d="M0,55.8 C376,55.8 627,300 896,300" style="animation-delay:-1.01s"/>
+<path class="base" d="M0,83.5 C376,83.5 627,300 896,300"/><path class="cur" d="M0,83.5 C376,83.5 627,300 896,300" style="animation-delay:-2.02s"/>
+<path class="base" d="M0,111.3 C376,111.3 627,300 896,300"/><path class="cur" d="M0,111.3 C376,111.3 627,300 896,300" style="animation-delay:-0.43s"/>
+<path class="base" d="M0,139.1 C376,139.1 627,300 896,300"/><path class="cur" d="M0,139.1 C376,139.1 627,300 896,300" style="animation-delay:-1.44s"/>
+<path class="base" d="M0,166.8 C376,166.8 627,300 896,300"/><path class="cur" d="M0,166.8 C376,166.8 627,300 896,300" style="animation-delay:-2.46s"/>
+<path class="base" d="M0,194.6 C376,194.6 627,300 896,300"/><path class="cur" d="M0,194.6 C376,194.6 627,300 896,300" style="animation-delay:-0.87s"/>
+<path class="base" d="M0,222.4 C376,222.4 627,300 896,300"/><path class="cur" d="M0,222.4 C376,222.4 627,300 896,300" style="animation-delay:-1.88s"/>
+<path class="base" d="M0,250.1 C376,250.1 627,300 896,300"/><path class="cur" d="M0,250.1 C376,250.1 627,300 896,300" style="animation-delay:-0.29s"/>
+<path class="base" d="M0,277.9 C376,277.9 627,300 896,300"/><path class="cur" d="M0,277.9 C376,277.9 627,300 896,300" style="animation-delay:-1.30s"/>
+<path class="base" d="M0,305.6 C376,305.6 627,300 896,300"/><path class="cur" d="M0,305.6 C376,305.6 627,300 896,300" style="animation-delay:-2.31s"/>
+<path class="base" d="M0,333.4 C376,333.4 627,300 896,300"/><path class="cur" d="M0,333.4 C376,333.4 627,300 896,300" style="animation-delay:-0.72s"/>
+<path class="base" d="M0,361.2 C376,361.2 627,300 896,300"/><path class="cur" d="M0,361.2 C376,361.2 627,300 896,300" style="animation-delay:-1.73s"/>
+<path class="base" d="M0,388.9 C376,388.9 627,300 896,300"/><path class="cur" d="M0,388.9 C376,388.9 627,300 896,300" style="animation-delay:-0.14s"/>
+<path class="base" d="M0,416.7 C376,416.7 627,300 896,300"/><path class="cur" d="M0,416.7 C376,416.7 627,300 896,300" style="animation-delay:-1.16s"/>
+<path class="base" d="M0,444.5 C376,444.5 627,300 896,300"/><path class="cur" d="M0,444.5 C376,444.5 627,300 896,300" style="animation-delay:-2.17s"/>
+<path class="base" d="M0,472.2 C376,472.2 627,300 896,300"/><path class="cur" d="M0,472.2 C376,472.2 627,300 896,300" style="animation-delay:-0.58s"/>
+<path class="base" d="M0,500.0 C376,500.0 627,300 896,300"/><path class="cur" d="M0,500.0 C376,500.0 627,300 896,300" style="animation-delay:-1.59s"/>
 <circle class="dot" cx="896" cy="300" r="7"/>
 <circle class="ring" cx="896" cy="300" r="7"/>
 <rect x="930" y="220" width="70" height="44"/><line x1="940" x2="982" y1="233" y2="233"/><line x1="940" x2="982" y1="242" y2="242"/><line x1="940" x2="982" y1="251" y2="251"/><circle class="led" cx="991" cy="229" r="3" style="animation-duration:1.20s"/>
