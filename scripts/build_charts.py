@@ -659,7 +659,7 @@ EXTERNAL = [
      "https://datawrapper.dwcdn.net/VEC9a/2/"),
     ("DW3", "Datawrapper", "The big jump came in 2025; 2026 added less", "https://datawrapper.dwcdn.net/we7PO/1/"),
     ("DW4", "Datawrapper", "So who wins, and who pays?", "https://datawrapper.dwcdn.net/nwkgu/1/"),
-    ("F1", "Flourish", "Donut: share of mapped data-center floor space by county (title set in Flourish)",
+    ("F1", "Flourish", "Donut: share of mapped data-center building footprint area by county (title set in Flourish)",
      "https://public.flourish.studio/visualisation/30840499/"),
     ("F2", "Flourish", "Bar chart race: trailing-4-quarter capex, 5 companies (title set in Flourish)",
      "https://public.flourish.studio/visualisation/30840369/"),
