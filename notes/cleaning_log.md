@@ -223,3 +223,9 @@ Raw files are write-once (`fetch_common.write_once` never overwrites); filename 
 - New hand-entered facts row `pjm_2627_at_cap` = true. It awaits human verification.
 - `build_manual_csvs.h1_pjm` sets 2026/27 `at_cap=True` (new columns `at_cap_fact_id` and `at_cap_source`) only once that row is verified. Until then the cell stays blank and a warning is logged.
 - `build_charts.h1`: the title comes from the number of consecutive at-cap auctions ending with the latest. Three gives "Three auctions in a row hit the ceiling"; two keeps "The last two auctions hit the price cap". When the cap status is sourced, the source line adds the 2026/27 report and the "PJM report does not state…" note is dropped. A scratch test with a simulated verification produced the three-auction title, `atCap` [F,F,T,T,T], and no note.
+
+## DW4 jobs source page (2026-11-07)
+
+- Human choice: the DW4 row "Jobs supported per year" now cites JLARC PDF p.33, the table showing 59,000 / 15,000 / 74,000 jobs. The link is `#page=33` and the label is "JLARC, p. 33". It is set in `build_uploads.SOURCE_PAGE`.
+- facts.csv keeps its evidence pages (32 for 74,000, 34 for 59,000); the facts rows are unchanged.
+- The only remaining difference from the hand-made file is the label: the hand-made file says "pp. 33–34". Both link to p.33.

@@ -14,6 +14,7 @@ from __future__ import annotations
 import csv
 import datetime
 import logging
+import re
 import sys
 from pathlib import Path
 
@@ -130,17 +131,29 @@ DW4 = [
 ]
 
 
-def source_md(f: bm.Facts, ids: list[str], name: str) -> str:
+# Human choice (2026-11-07): cite one page that shows all figures of the row, instead of the
+# facts.csv evidence pages. JLARC PDF p.33 is the table "59,000 jobs 15,000 jobs 74,000 jobs"
+# (checked in data/raw/reports/jlarc_2026-11-07.pdf); facts.csv keeps its evidence pages 32 and 34.
+SOURCE_PAGE = {"Jobs supported per year, incl. indirect and induced": 33}
+
+
+def source_md(f: bm.Facts, ids: list[str], name: str, page: int | None = None) -> str:
     rows = [f.row(i) for i in ids]
-    pages = sorted({int(r["page"]) for r in rows if r["page"].isdigit()})
+    url = rows[0]["source_url"]
+    if page is not None:
+        if "#page=" not in url:
+            fail(f"DW4: page override {page} on a non-PDF source {url}")
+        pages, url = [page], re.sub(r"#page=\d+$", f"#page={page}", url)
+    else:
+        pages = sorted({int(r["page"]) for r in rows if r["page"].isdigit()})
     label = name + (f", p. {pages[0]}" if len(pages) == 1 else
                     f", pp. {', '.join(map(str, pages))}" if pages else "")
-    return f"[{label}]({rows[0]['source_url']})"
+    return f"[{label}]({url})"
 
 
 def dw4(f: bm.Facts) -> pd.DataFrame:
     rows = [{"Side": side, "Who": who, "What": what, "Figure": fmt([f.v(i) for i in ids]), "When": when,
-             "Source": source_md(f, ids, name)}
+             "Source": source_md(f, ids, name, SOURCE_PAGE.get(what))}
             for side, who, what, ids, fmt, when, name in DW4]
     sides = pd.Series([r["Side"] for r in rows]).value_counts().to_dict()
     if sides != {"Wins": 2, "Pays": 5, "Context": 2}:
@@ -281,8 +294,8 @@ BUILD = [("dw1", dw1, "state"), ("dw2", dw2, "state"), ("dw3", dw3, "Utility"), 
 EXPLAINED: dict[tuple[str, str, str], str] = {
     ("dw2", "*", "*"): "no hand-made DW2 upload exists; data/upload/dw2.csv is new",
     ("dw4", "Jobs supported per year, incl. indirect and induced", "Source"):
-        "both correct: generated cites the facts.csv evidence pages (PDF p.32 text '74,000 jobs', p.34 text "
-        "'59,000 jobs'); hand-made cites p.33, a table showing 59,000 / 15,000 / 74,000. Human picks one",
+        "label only: both link to PDF p.33 (human choice, the table with 59,000 / 15,000 / 74,000); generated "
+        "says 'p. 33', hand-made says 'pp. 33–34'",
 }
 
 

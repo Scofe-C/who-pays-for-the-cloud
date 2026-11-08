@@ -7,7 +7,7 @@ Differences: **2**, unexplained: **0**.
 | file | row key | column | generated | hand-made | explanation |
 |---|---|---|---|---|---|
 | dw2 | * | * | file written | no hand-made file | no hand-made DW2 upload exists; data/upload/dw2.csv is new |
-| dw4 | Jobs supported per year, incl. indirect and induced | Source | [JLARC, pp. 32, 34](https://jlarc.virginia.gov/pdfs/reports/Rpt598-2.pdf#page=32) | [JLARC, pp. 33–34](https://jlarc.virginia.gov/pdfs/reports/Rpt598-2.pdf#page=33) | both correct: generated cites the facts.csv evidence pages (PDF p.32 text '74,000 jobs', p.34 text '59,000 jobs'); hand-made cites p.33, a table showing 59,000 / 15,000 / 74,000. Human picks one |
+| dw4 | Jobs supported per year, incl. indirect and induced | Source | [JLARC, p. 33](https://jlarc.virginia.gov/pdfs/reports/Rpt598-2.pdf#page=33) | [JLARC, pp. 33–34](https://jlarc.virginia.gov/pdfs/reports/Rpt598-2.pdf#page=33) | label only: both link to PDF p.33 (human choice, the table with 59,000 / 15,000 / 74,000); generated says 'p. 33', hand-made says 'pp. 33–34' |
 
 ## Checks and notes
 
